@@ -9,9 +9,9 @@ function Hero() {
           <HomepageButton>LL</HomepageButton>
         </div>
 
-        <div className="hidden text-sm text-center xs:block sm:text-base">
+        <p className="hidden text-sm text-center xs:block sm:text-base">
           Software Developer - Pilsen
-        </div>
+        </p>
 
         <nav className="flex justify-end lg:hidden">
           <button className="w-[20px]">
@@ -34,8 +34,8 @@ function Hero() {
       </main>
 
       <aside className="text-sm flex justify-between sm:text-base font-[Inter]">
-        <div>Learning by building</div>
-        <div>(SCROLL)</div>
+        <p>Learning by building</p>
+        <p>(SCROLL)</p>
       </aside>
     </div>
   )

@@ -1,3 +1,4 @@
+import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects/Projects";
 
@@ -8,6 +9,8 @@ function Homepage() {
       <Hero />
 
       <Projects />
+
+      <Footer />
     </div>
   )
 }
