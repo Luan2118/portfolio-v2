@@ -1,10 +1,9 @@
-import HomepageButton from "../ui/HomepageButton";
-import menuIcon from "../assets/icons/menu.png"
+import HomepageButton from "../../../ui/HomepageButton";
+import menuIcon from "../../../assets/icons/menu.png"
 
-function Homepage() {
+function Hero() {
   return (
-    <div className="h-dvh bg-[#FFFBF4] flex flex-col justify-between p-8 font-[Inter]">
-
+    <>
       <aside className="grid grid-cols-2 items-center xs:grid-cols-3">
         <div>
           <HomepageButton>LL</HomepageButton>
@@ -19,7 +18,7 @@ function Homepage() {
             <img src={menuIcon} alt="Menu" />
           </button>
         </nav>
-        
+
         <nav className="hidden flex justify-end gap-12 lg:flex">
           <HomepageButton>Projects</HomepageButton>
           <HomepageButton>Skills</HomepageButton>
@@ -38,10 +37,9 @@ function Homepage() {
         <div>Learning by building</div>
         <div>(SCROLL)</div>
       </aside>
-
-    </div>
+    </>
   )
 }
 
 
-export default Homepage;
+export default Hero;
