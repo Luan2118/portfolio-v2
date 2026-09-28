@@ -3,7 +3,7 @@ import menuIcon from "../../../assets/icons/menu.png"
 
 function Hero() {
   return (
-    <>
+    <div  className="h-dvh bg-[#FFFBF4] flex flex-col justify-between p-8 font-[Inter]">
       <aside className="grid grid-cols-2 items-center xs:grid-cols-3">
         <div>
           <HomepageButton>LL</HomepageButton>
@@ -37,7 +37,7 @@ function Hero() {
         <div>Learning by building</div>
         <div>(SCROLL)</div>
       </aside>
-    </>
+    </div>
   )
 }
 
