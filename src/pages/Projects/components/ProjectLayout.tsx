@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import blackArrow from "../../../assets/icons/blackArrow.png"
 import whiteArrow from "../../../assets/icons/whiteArrow.png"
 import Button from "./Button";
@@ -24,9 +25,10 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
       <div className={`contents xl:flex xl:flex-col xl:px-20 2xl:px-30 ${isDark ? 'bg-[#171512]' : 'bg-[#FFFBF4]'}`}>
         <div className="order-1 flex flex-col gap-6 md:gap-10 py-8">
-          <div className="mb-15">
+
+          <Link to='/' className="mb-15">
             <img src={isDark ? whiteArrow : blackArrow} alt="" />
-          </div>
+          </Link>
 
 
           <h1 className="text-5xl lg:text-7xl font-[Judson] text-center">{title}</h1>
