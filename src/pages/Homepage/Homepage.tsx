@@ -1,7 +1,6 @@
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Contact/Contact";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects/Projects";
+import Contact from "./sections/Contact/Contact";
+import Hero from "./sections/Hero";
+import Projects from "./sections/Projects/Projects";
 
 
 function Homepage() {
