@@ -6,44 +6,46 @@ import FormField from "./components/FormField";
 
 function Footer() {
   return (
-    <div className="h-dvh bg-[#FFFBF4]  flex flex-col p-40 px-70 gap-30">
+    <>
+      <div className="h-dvh bg-[#FFFBF4] flex flex-col gap-15 py-15 px-5 xs:px-15 sm:px-20 sm:py-30 md:gap-40 md:py-40 lg:px-40  2xl:px-80">
 
-      <div className="mx-auto">
-        <p className="text-9xl font-[Judson]">Get in Contact</p>
-      </div>
-
-
-      <div className="grid grid-cols-2 font-[Inter]">
-        <div className="flex flex-col gap-30">
-          <div className="flex flex-col gap-6">
-            <ContactLink src={github} text="Github" />
-
-            <ContactLink src={linkedin} text="LinkedIn" />
-
-            <ContactLink src={cv} text="CV" />
-
-          </div>
-
-          <div className="w-xs">
-            <p className="text-3xl font-[Judson]">leluanvn21@seznam.cz</p>
-            <hr />
-          </div>
+        <div className="mx-auto">
+          <p className="text-[clamp(56px,10vw,128px)] leading-none font-[Judson] text-center">Get in Contact</p>
         </div>
 
 
-        <form className="flex flex-col gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 ">
 
-          <FormField id="name" label="Your name" placeholder="John Doe"/>
+          <form className="order-1 md:order-2 flex flex-col justify-between ">
 
-          <FormField id="email" label="Your email" placeholder="johndoe@example.com"/>
+            <FormField id="name" label="Your name" placeholder="John Doe" />
 
-          <FormField id="message" label="Your message" placeholder="Tell me about the opportunity..."/>
+            <FormField id="email" label="Your email" placeholder="johndoe@example.com" />
 
-          <button className="self-end">Submit</button>
-        </form>
+            <FormField id="message" label="Your message" placeholder="Tell me about the opportunity..." />
+
+            <button className="self-end text-sm lg:text-lg">Submit</button>
+          </form>
+
+          <div className="order-2 md:order-1 flex flex-col gap-15 md:gap-30 mt-20 md:mt-0">
+            <div className="flex flex-col gap-6">
+              <ContactLink src={github} text="Github" />
+
+              <ContactLink src={linkedin} text="LinkedIn" />
+
+              <ContactLink src={cv} text="CV" />
+
+            </div>
+
+            <div className="w-[200px] sm:w-[240px] 2xl:w-xs">
+              <p className="text-xl sm:text-2xl 2xl:text-3xl font-[Judson]">leluanvn21@seznam.cz</p>
+              <hr />
+            </div>
+          </div>
+        </div>
       </div>
-      <p className="self-center font-[Judson]">(© 2026 Luan Le)</p>
-    </div>
+        <footer className="text-center font-[Judson] bg-[#FFFBF4] py-2 text-sm sm:text-base">(© 2026 Luan Le)</footer>
+    </>
   )
 }
 
