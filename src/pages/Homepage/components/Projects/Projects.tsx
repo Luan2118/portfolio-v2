@@ -3,9 +3,9 @@ import ProjectCard from "./components/ProjectCard";
 
 function Projects() {
   return (
-    <div className="bg-[#171512] text-[#FFFBF4] h-dvh flex flex-row py-30 px-70">
+    <div className="bg-[#171512] text-[#FFFBF4] h-dvh flex flex-col py-20 px-5 xs:px-15 sm:px-20  md:flex-row lg:px-50 lg:py-30 ">
 
-      <p className="text-3xl font-[Judson] ">Projects</p>
+      <p className="text-[clamp(15px,7vw,30px)] leading-non font-[Judson] ">Projects</p>
 
 
       <div className="flex flex-col mx-auto px-4 py-6 " >

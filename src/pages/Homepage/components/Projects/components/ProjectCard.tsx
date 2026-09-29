@@ -6,19 +6,20 @@ type ProjectCardProps = {
   description: string
 }
 
-function ProjectCard({name, description}: ProjectCardProps) {
+function ProjectCard({ name, description }: ProjectCardProps) {
   return (
-      <div className="flex flex-col gap-4 mt-10 px-4 py-6 w-3xl">
-        <div className="flex justify-between">
-          <p className="text-5xl font-[Judson] ">{name}</p>
-          <img src={projectsArrow} alt="" />
-        </div>
-
-
-        <p className="text-base w-xl font-[Inter]">{description}</p>
-        <hr />
-
+    <div className="flex flex-col  md:mt-10 px-4 py-6 ">
+      <div className="flex justify-between">
+        <p className="text-[clamp(20px,4vw,45px)] leading-none font-[Judson] ">{name}</p>
+        <img className="w-[clamp(25px,4vw,45px)] h-[clamp(25px,4vw,48px)]" src={projectsArrow} alt="" />
       </div>
+
+      <div className="mt-6">
+        <p className="text-xs  lg:text-sm mb-3 w-[85%]">{description}</p>
+        <hr />
+      </div>
+
+    </div>
   )
 
 }
