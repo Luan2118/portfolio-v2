@@ -6,6 +6,7 @@ import ProjectLayout from "./components/ProjectLayout"
 function GymTracker() {
   return (
     <ProjectLayout
+      title="Gym Tracker"
       overview="
       Gym Tracker is a workout tracking web app for managing training plans, logging workouts, and tracking progress.
       I built the application from scratch with React, TypeScript, Supabase, and Chart.js, focusing on a clean responsive interface and practical workout tracking."
@@ -14,6 +15,7 @@ function GymTracker() {
       stack="React, TypeScript, Supabase, PostgreSQL, Chart.js"
       lesson="The biggest lesson was learning how to design features around real data flows — from the database, through application logic, all the way to the UI."
       images={[dashboard, workoutHistory, exercises]}
+      theme="light"
     />
   )
 }
