@@ -10,6 +10,7 @@ function HospodaPodBousovem() {
       overview="Local business website for a village pub, focused on presenting the venue, menu and essential visitor information."
       isInProgress={true}
       images={[sideView, frontView, sideView]}
+      theme="light"
     />
   )
 }
