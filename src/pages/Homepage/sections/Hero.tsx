@@ -1,4 +1,4 @@
-import HomepageButton from "../../../ui/HomepageButton";
+import HomepageButton from "../components/HomepageButton";
 import menuIcon from "../../../assets/icons/menu.png"
 
 function Hero() {
