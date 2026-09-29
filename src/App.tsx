@@ -1,7 +1,7 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Homepage from './pages/Homepage/Homepage'
-import GymTracker from './pages/Projects/GymTracker/GymTracker'
+import GymTracker from './pages/Projects/GymTracker'
 
 function App() {
   return (

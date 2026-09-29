@@ -1,7 +1,7 @@
-import dashboard from "../../../assets/images/gym-tracker/gym-dashboard.png"
-import workoutHistory from "../../../assets/images/gym-tracker/workout-history.png"
-import exercises from "../../../assets/images/gym-tracker/exercises.png"
-import ProjectLayout from "../components/ProjectLayout"
+import dashboard from "../../assets/images/gym-tracker/gym-dashboard.png"
+import workoutHistory from "../../assets/images/gym-tracker/workout-history.png"
+import exercises from "../../assets/images/gym-tracker/exercises.png"
+import ProjectLayout from "./components/ProjectLayout"
 
 function GymTracker() {
   return (
