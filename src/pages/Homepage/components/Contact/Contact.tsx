@@ -3,8 +3,9 @@ import linkedin from "../../../../assets/icons/linkedin.png"
 import cv from "../../../../assets/icons/cv.png"
 import ContactLink from "./components/ContactLink";
 import FormField from "./components/FormField";
+import Footer from "../Footer";
 
-function Footer() {
+function Contact() {
   return (
     <>
       <div className="h-dvh bg-[#FFFBF4] flex flex-col gap-15 py-15 px-5 xs:px-15 sm:px-20 sm:py-30 md:gap-40 md:py-40 lg:px-40  2xl:px-80">
@@ -44,10 +45,10 @@ function Footer() {
           </div>
         </div>
       </div>
-        <footer className="text-center font-[Judson] bg-[#FFFBF4] py-2 text-sm sm:text-base">(© 2026 Luan Le)</footer>
+        <Footer />
     </>
   )
 }
 
 
-export default Footer;
+export default Contact;

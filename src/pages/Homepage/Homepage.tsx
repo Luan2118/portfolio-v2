@@ -1,4 +1,5 @@
-import Footer from "./components/Footer/Footer";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Contact/Contact";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects/Projects";
 
@@ -10,7 +11,7 @@ function Homepage() {
 
       <Projects />
 
-      <Footer />
+      <Contact />
     </div>
   )
 }
