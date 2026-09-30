@@ -31,7 +31,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
   const isDark = theme === 'dark';
 
   return (
-    <div className={`h-dvh  grid grid-cols-1 xl:grid-cols-2 pb-5 px-5 xl:pb-0 xl:px-0  ${isDark ? 'bg-[#171512] text-[#FFFBF4]' : 'bg-[#FFFBF4] text-[#171512]'}`}>
+    <div className={`min-h-dvh grid grid-cols-1 xl:grid-cols-2 pb-5 px-5 xl:pb-0 xl:px-0 xl:h-dvh  ${isDark ? 'bg-[#171512] text-[#FFFBF4]' : 'bg-[#FFFBF4] text-[#171512]'}`}>
 
       <div className={`contents xl:flex xl:flex-col ${isDark ? 'bg-[#171512]' : 'bg-[#FFFBF4]'}`}>
 
@@ -90,7 +90,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
         </div>
 
         {isInProgress ? null :
-          <div className="order-3 pb-4 flex justify-between  mt-10  xl:px-20 2xl:px-35  xl:mt-15">
+          <div className="order-3 pb-4 flex justify-between  mt-10  xl:px-20 2xl:px-35  xl:mt-15 bg-[#171512] text-[#FFFBF4]">
             <div className="flex gap-2 md:gap-5">
               <ProjectLink label="Live" theme={theme} projectPath={livePath} />
               <ProjectLink label="Github" theme={theme} projectPath={gitHubPath} />
@@ -101,7 +101,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
       </div>
 
-      <div className=" order-2 xl:overflow-y-scroll mt-15 xl:mt-0">
+      <div className=" order-2 xl:overflow-y-scroll mt-15 xl:mt-0 bg-[#171512] text-[#FFFBF4]">
         {images?.map((image) => {
           return (
             <img src={image} alt="" key={image} className=""/>
