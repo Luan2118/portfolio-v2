@@ -1,7 +1,7 @@
 type ProjectLinkProps = {
   label: string
   theme: 'dark' | 'light'
-  projectPath: string
+  projectPath?: string
 }
 
 
