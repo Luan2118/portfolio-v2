@@ -90,7 +90,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
         </div>
 
         {isInProgress ? null :
-          <div className="order-3 pb-4 flex justify-between  mt-10  xl:px-20 2xl:px-35  xl:mt-15 bg-[#171512] text-[#FFFBF4]">
+          <div className="order-3 pb-4 flex justify-between  mt-10  xl:px-20 2xl:px-35  xl:mt-15 ">
             <div className="flex gap-2 md:gap-5">
               <ProjectLink label="Live" theme={theme} projectPath={livePath} />
               <ProjectLink label="Github" theme={theme} projectPath={gitHubPath} />
@@ -101,7 +101,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
       </div>
 
-      <div className=" order-2 xl:overflow-y-scroll mt-15 xl:mt-0 bg-[#171512] text-[#FFFBF4]">
+      <div className=" order-2 xl:overflow-y-scroll mt-15 xl:mt-0 ">
         {images?.map((image) => {
           return (
             <img src={image} alt="" key={image} className=""/>
