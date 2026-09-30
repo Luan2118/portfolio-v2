@@ -94,7 +94,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
               <ProjectLink label="Live" theme={theme} projectPath={livePath}/>
               <ProjectLink label="Github" theme={theme} projectPath={gitHubPath}/>
             </div>
-            <Link to={linkPath} className={`text-xs xs:text-sm sm:text-base border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}>Next Project</Link>
+            <Link to={linkPath} className={`text-xs xs:text-sm sm:text-base rounded-sm border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}>Next Project</Link>
           </div>
         }
 

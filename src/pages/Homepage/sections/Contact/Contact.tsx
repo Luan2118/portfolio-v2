@@ -69,7 +69,7 @@ function Contact() {
 
               <FormField name="message" id="message" label="Your message" placeholder="Tell me about the opportunity..." />
 
-              <button className="self-end text-sm lg:text-lg">Submit</button>
+              <button className="self-end text-sm lg:text-lg font-[Inter] mt-3 border px-3 border-[#292725] text-[#292725] rounded-sm cursor-pointer xs:px-5 md:px-6 ">Submit</button>
             </form>
 
             {status === "success" && (
