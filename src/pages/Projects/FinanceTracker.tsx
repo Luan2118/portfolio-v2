@@ -8,16 +8,18 @@ import dashboardMobile from "../../assets/images/finance-tracker/dashboard-mobil
 function FinanceTracker() {
   return (
     <ProjectLayout
-    title="Finance Tracker"
-      overview="
+      title='Finance Tracker'
+      overview='
       Finance Tracker is a full-stack personal finance web app for managing income and expenses, filtering transactions, visualizing financial data, and handling multiple currencies.
-      I built the frontend and backend from scratch using JavaScript, Node.js, Express, and MongoDB, including JWT authentication, protected user data, validation, and REST API endpoints."
-      type="Full-stack web application"
-      features="Authentication, transactions, filters, charts, currency conversion"
-      stack="JavaScript, Node.js, Express, MongoDB, Chart.js"
-      lesson="The biggest lesson was learning how to connect authentication, backend logic, and database access so each user could securely work with only their own data."
+      I built the frontend and backend from scratch using JavaScript, Node.js, Express, and MongoDB, including JWT authentication, protected user data, validation, and REST API endpoints.'
+      type='Full-stack web application'
+      features='Authentication, transactions, filters, charts, currency conversion'
+      stack='JavaScript, Node.js, Express, MongoDB, Chart.js'
+      lesson='The biggest lesson was learning how to connect authentication, backend logic, and database access so each user could securely work with only their own data.'
       images={[dashboard, expenses, seeAllExpenses, incomeMobile, dashboardMobile]}
-      theme="dark"
+      theme='dark'
+      livePath='https://finance-tracker-project-sigma.vercel.app/'
+      gitHubPath='https://github.com/Luan2118/finance-tracker'
     />
   )
 }

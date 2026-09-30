@@ -8,16 +8,18 @@ import exercisesMobile from "../../assets/images/gym-tracker/exercises-mobile.pn
 function GymTracker() {
   return (
     <ProjectLayout
-      title="Gym Tracker"
-      overview="
+      title='Gym Tracker'
+      overview='
       Gym Tracker is a workout tracking web app for managing training plans, logging workouts, and tracking progress.
-      I built the application from scratch with React, TypeScript, Supabase, and Chart.js, focusing on a clean responsive interface and practical workout tracking."
-      type="Full-stack web application"
-      features="Workouts, training splits, history, progress charts"
-      stack="React, TypeScript, Supabase, PostgreSQL, Chart.js"
-      lesson="The biggest lesson was learning how to design features around real data flows — from the database, through application logic, all the way to the UI."
+      I built the application from scratch with React, TypeScript, Supabase, and Chart.js, focusing on a clean responsive interface and practical workout tracking.'
+      type='Full-stack web application'
+      features='Workouts, training splits, history, progress charts'
+      stack='React, TypeScript, Supabase, PostgreSQL, Chart.js'
+      lesson='The biggest lesson was learning how to design features around real data flows — from the database, through application logic, all the way to the UI.'
       images={[dashboard, workoutHistory, exercises, activeMobile, exercisesMobile]}
-      theme="light"
+      theme='light'
+      livePath='https://gym-tracker-azure-tau.vercel.app/'
+      gitHubPath='https://github.com/Luan2118/gym-tracker'
     />
   )
 }
