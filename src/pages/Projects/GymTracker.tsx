@@ -1,7 +1,9 @@
-import dashboard from "../../assets/images/gym-tracker/gym-dashboard.png"
+import dashboard from "../../assets/images/gym-tracker/dashboard.png"
 import workoutHistory from "../../assets/images/gym-tracker/workout-history.png"
 import exercises from "../../assets/images/gym-tracker/exercises.png"
 import ProjectLayout from "./components/ProjectLayout"
+import activeMobile from "../../assets/images/gym-tracker/active-workout-mobile.png"
+import exercisesMobile from "../../assets/images/gym-tracker/exercises-mobile.png"
 
 function GymTracker() {
   return (
@@ -14,7 +16,7 @@ function GymTracker() {
       features="Workouts, training splits, history, progress charts"
       stack="React, TypeScript, Supabase, PostgreSQL, Chart.js"
       lesson="The biggest lesson was learning how to design features around real data flows — from the database, through application logic, all the way to the UI."
-      images={[dashboard, workoutHistory, exercises]}
+      images={[dashboard, workoutHistory, exercises, activeMobile, exercisesMobile]}
       theme="light"
     />
   )

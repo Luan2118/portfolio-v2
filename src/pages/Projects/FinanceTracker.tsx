@@ -2,6 +2,8 @@ import ProjectLayout from "./components/ProjectLayout";
 import dashboard from "../../assets/images/finance-tracker/dashboard.png"
 import expenses from "../../assets/images/finance-tracker/expenses.png"
 import seeAllExpenses from "../../assets/images/finance-tracker/see-all-expenses.png"
+import incomeMobile from "../../assets/images/finance-tracker/income-mobile.png"
+import dashboardMobile from "../../assets/images/finance-tracker/dashboard-mobile.png"
 
 function FinanceTracker() {
   return (
@@ -14,7 +16,7 @@ function FinanceTracker() {
       features="Authentication, transactions, filters, charts, currency conversion"
       stack="JavaScript, Node.js, Express, MongoDB, Chart.js"
       lesson="The biggest lesson was learning how to connect authentication, backend logic, and database access so each user could securely work with only their own data."
-      images={[dashboard, expenses, seeAllExpenses]}
+      images={[dashboard, expenses, seeAllExpenses, incomeMobile, dashboardMobile]}
       theme="dark"
     />
   )
