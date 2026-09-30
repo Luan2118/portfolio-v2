@@ -9,7 +9,7 @@ function Hero() {
           <NavItem label="LL" path="#hero"/>
         </div>
 
-        <p className="hidden text-sm text-center xs:block sm:text-base">
+        <p className="hidden text-sm text-center xs:block sm:text-lg">
           Software Developer - Pilsen
         </p>
 
@@ -32,7 +32,7 @@ function Hero() {
         </h1>
       </main>
 
-      <aside className="text-sm flex justify-between sm:text-base font-[Inter]">
+      <aside className="text-sm flex justify-between sm:text-lg font-[Inter]">
         <p>Learning by building</p>
         <p>(SCROLL)</p>
       </aside>
