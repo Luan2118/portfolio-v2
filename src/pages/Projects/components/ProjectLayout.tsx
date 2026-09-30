@@ -18,6 +18,14 @@ type ProjectLayoutProps = {
 
 function ProjectLayout({ title, overview, type, features, stack, lesson, images, theme, isInProgress }: ProjectLayoutProps) {
 
+  const linkPath = 
+    title === 'Gym Tracker' ? '/finance-tracker' : 
+    title === 'Finance Tracker' ? '/hospudka-pod-bousovem' : '/'
+  
+  const linkStyle = theme === "dark"
+      ? "border-white text-white"
+      : "border-[#292725] text-[#292725]"
+
   const isDark = theme === 'dark';
 
   return (
@@ -84,7 +92,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
               <Button label="Live" theme={theme} />
               <Button label="Github" theme={theme} />
             </div>
-            <Button label="Next Project" theme={theme} />
+            <Link to={linkPath} className={`text-xs xs:text-sm sm:text-base border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}>Next Project</Link>
           </div>
         }
 
