@@ -51,14 +51,14 @@ function Contact() {
 
   return (
     <>
-      <div id="contact" className="h-dvh bg-[#FFFBF4] flex flex-col gap-15 py-15 px-5 xs:px-15 sm:px-20 sm:py-30 md:gap-40 md:py-40 lg:px-40  2xl:px-80">
+      <div id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col gap-15 py-15 px-5 xs:px-15 sm:px-20 md:gap-40 md:py-30 lg:py-40 lg:px-40  2xl:px-80">
 
         <div className="mx-auto">
           <p className="text-[clamp(56px,10vw,128px)] leading-none font-[Judson] text-center">Get in Contact</p>
         </div>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 ">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 ">
 
           <div className="order-1 md:order-2">
             <form className="flex flex-col justify-between" onSubmit={(e) => handleSubmit(e)}>
@@ -88,7 +88,7 @@ function Contact() {
             )}
           </div>
 
-          <div className="order-2 md:order-1 flex flex-col gap-15 md:gap-0 md:justify-between mt-20 md:mt-0">
+          <div className="order-2 md:order-1 flex flex-col gap-15 md:gap-0 md:justify-between  md:mt-0">
             <div className="flex flex-col gap-6 mt-2">
               <ContactLink src={github} text="Github" path='https://github.com/Luan2118' />
 

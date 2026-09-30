@@ -31,7 +31,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
   const isDark = theme === 'dark';
 
   return (
-    <div className={` grid grid-cols-1 xl:grid-cols-2 pb-5 px-5 xl:pb-0 xl:px-0 xl:h-dvh ${isDark ? 'bg-[#171512] text-[#FFFBF4]' : 'bg-[#FFFBF4] text-[#171512]'}`}>
+    <div className={`min-h-dvh grid grid-cols-1 xl:grid-cols-2 pb-5 px-5 xl:pb-0 xl:px-0  ${isDark ? 'bg-[#171512] text-[#FFFBF4]' : 'bg-[#FFFBF4] text-[#171512]'}`}>
 
       <div className={`contents xl:flex xl:flex-col ${isDark ? 'bg-[#171512]' : 'bg-[#FFFBF4]'}`}>
 
