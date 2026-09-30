@@ -14,10 +14,10 @@ function ProjectCard({ name, description }: ProjectCardProps) {
     name === 'Hospůdka pod Boušovem' ? '/hospudka-pod-bousovem' : '/'
               
   return (
-    <Link to={link} className="flex flex-col  md:mt-10 px-4 py-6 text-start" >
+    <Link to={link} className="flex flex-col  xl:mt-10 px-4 py-6 text-start" >
       <div className="flex justify-between">
-        <p className="text-[clamp(20px,4vw,45px)] leading-none font-[Judson] ">{name}</p>
-        <img className="w-[clamp(25px,4vw,45px)] h-[clamp(25px,4vw,48px)]" src={projectsArrow} alt="" />
+        <p className="text-[clamp(20px,4vw,40px)] leading-none font-[Judson] ">{name}</p>
+        <img className="w-[clamp(25px,4vw,40px)] h-[clamp(25px,4vw,40px)] ml-10" src={projectsArrow} alt="" />
       </div>
 
       <div className="mt-6">
