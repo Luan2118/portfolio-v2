@@ -61,7 +61,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
               <div>
                 <p className="text-xl lg:text-xl font-[Judson] py-4">Details</p>
 
-                <dl className="text-sm">
+                <dl className="text-sm w-fit">
                   <div className="grid grid-cols-[80px_1fr] gap-4 border-b border-black/20 pb-2">
                     <dt className="font-medium uppercase tracking-wide">Type</dt>
                     <dd>{type}</dd>
