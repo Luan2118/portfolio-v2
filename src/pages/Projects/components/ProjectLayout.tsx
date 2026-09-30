@@ -101,10 +101,10 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
       </div>
 
-      <div className="order-2 xl:overflow-y-scroll mt-15 xl:mt-0">
+      <div className=" order-2 xl:overflow-y-scroll mt-15 xl:mt-0">
         {images?.map((image) => {
           return (
-            <img src={image} alt="" key={image} className="min-h-[260px]"/>
+            <img src={image} alt="" key={image} className=""/>
           )
         })}
       </div>
