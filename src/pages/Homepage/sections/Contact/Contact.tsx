@@ -8,7 +8,7 @@ import Footer from "../Footer";
 function Contact() {
   return (
     <>
-      <div className="h-dvh bg-[#FFFBF4] flex flex-col gap-15 py-15 px-5 xs:px-15 sm:px-20 sm:py-30 md:gap-40 md:py-40 lg:px-40  2xl:px-80">
+      <div id="contact" className="h-dvh bg-[#FFFBF4] flex flex-col gap-15 py-15 px-5 xs:px-15 sm:px-20 sm:py-30 md:gap-40 md:py-40 lg:px-40  2xl:px-80">
 
         <div className="mx-auto">
           <p className="text-[clamp(56px,10vw,128px)] leading-none font-[Judson] text-center">Get in Contact</p>

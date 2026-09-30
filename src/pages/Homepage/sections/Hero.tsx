@@ -1,12 +1,12 @@
-import HomepageButton from "../components/HomepageButton";
+import NavItem from "../components/NavItem";
 import menuIcon from "../../../assets/icons/menu.png"
 
 function Hero() {
   return (
-    <div  className="h-dvh bg-[#FFFBF4] flex flex-col justify-between p-8 font-[Inter]">
+    <div id="hero" className="h-dvh bg-[#FFFBF4] flex flex-col justify-between p-8 font-[Inter]">
       <aside className="grid grid-cols-2 items-center xs:grid-cols-3">
         <div>
-          <HomepageButton>LL</HomepageButton>
+          <NavItem label="LL" path="#hero"/>
         </div>
 
         <p className="hidden text-sm text-center xs:block sm:text-base">
@@ -19,10 +19,9 @@ function Hero() {
           </button>
         </nav>
 
-        <nav className="hidden flex justify-end gap-12 lg:flex">
-          <HomepageButton>Projects</HomepageButton>
-          <HomepageButton>Skills</HomepageButton>
-          <HomepageButton>Contact</HomepageButton>
+        <nav className="hidden flex justify-end gap-10 lg:flex">
+          <NavItem label="Projects" path="#projects"/>
+          <NavItem label="Contact" path="#contact"/>
         </nav>
       </aside>
 
