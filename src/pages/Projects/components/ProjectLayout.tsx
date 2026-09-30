@@ -33,22 +33,22 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
   return (
     <div className={` grid grid-cols-1 xl:grid-cols-2 px-10 md:px-15 xl:p-0 xl:h-dvh ${isDark ? 'bg-[#171512] text-[#FFFBF4]' : 'bg-[#FFFBF4] text-[#171512]'}`}>
 
-      <div className={`contents xl:flex xl:flex-col xl:px-20 2xl:px-30 ${isDark ? 'bg-[#171512]' : 'bg-[#FFFBF4]'}`}>
-        <div className="order-1 flex flex-col gap-6 md:gap-10 py-8">
+      <div className={`contents xl:flex xl:flex-col xl:px-20 2xl:px-35 ${isDark ? 'bg-[#171512]' : 'bg-[#FFFBF4]'}`}>
+        <div className="order-1 flex flex-col gap-4 md:gap-10 py-8">
 
-          <Link to='/' className="mb-15">
+          <Link to='/' className="mb-10">
             <img src={isDark ? whiteArrow : blackArrow} alt="" />
           </Link>
 
 
-          <h1 className="text-5xl lg:text-7xl font-[Judson] text-center">{title}</h1>
+          <h1 className="text-5xl lg:text-6xl font-[Judson] text-center">{title}</h1>
 
           {isInProgress ? <p className="font-[Inter] text-3xl text-[#A84A3A] mx-auto tracking-[0.4rem] mt-15 mb-15">WEBSITE REDESIGN - IN PROGRESS</p>
             : null}
 
           <div className="mt-5">
-            <p className="text-xl lg:text-2xl font-[Judson] py-4">Project Overview</p>
-            <p className="text-sm md:text-base">
+            <p className="text-xl lg:text-xl font-[Judson] py-4">Project Overview</p>
+            <p className="text-sm h-18">
               {overview}
             </p>
           </div>
@@ -58,9 +58,9 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
           {isInProgress ? null :
             <>
               <div>
-                <p className="text-xl lg:text-2xl font-[Judson] py-4">Details</p>
+                <p className="text-xl lg:text-xl font-[Judson] py-4">Details</p>
 
-                <dl className="text-sm md:text-base">
+                <dl className="text-sm">
                   <div className="grid grid-cols-[80px_1fr] gap-4 border-b border-black/20 pb-2">
                     <dt className="font-medium uppercase tracking-wide">Type</dt>
                     <dd>{type}</dd>
@@ -79,8 +79,8 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
               </div>
 
               <div>
-                <p className="text-xl lg:text-2xl font-[Judson] py-4">What I learned</p>
-                <p className="text-sm md:text-base">
+                <p className="text-xl lg:text-xl font-[Judson] py-4">What I learned</p>
+                <p className="text-sm">
                   {lesson}
                 </p>
               </div>
@@ -89,7 +89,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
         </div>
 
         {isInProgress ? null :
-          <div className="order-3 flex justify-between py-6  xl:mt-8">
+          <div className="order-3 flex justify-between   xl:mt-8">
             <div className="flex gap-2 md:gap-5">
               <ProjectLink label="Live" theme={theme} projectPath={livePath}/>
               <ProjectLink label="Github" theme={theme} projectPath={gitHubPath}/>
