@@ -13,7 +13,7 @@ function ProjectLink({ label, theme, projectPath }: ProjectLinkProps) {
       : "border-[#292725] text-[#292725]"
   return (
 
-        <a href={projectPath} className={`text-xs xs:text-sm sm:text-base border rounded-sm py-1 px-3 xs:px-6 md:px-8 ${buttonStyle}`}> {label}</a>
+        <a href={projectPath} target='_blank' rel="noopener noreferrer" className={`text-xs xs:text-sm sm:text-base border rounded-sm py-1 px-3 xs:px-6 md:px-8 ${buttonStyle}`}> {label}</a>
   )
 }
 
