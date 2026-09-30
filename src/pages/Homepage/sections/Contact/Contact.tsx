@@ -30,11 +30,11 @@ function Contact() {
 
           <div className="order-2 md:order-1 flex flex-col gap-15 md:gap-30 mt-20 md:mt-0">
             <div className="flex flex-col gap-6">
-              <ContactLink src={github} text="Github" />
+              <ContactLink src={github} text="Github" path='https://github.com/Luan2118'/>
 
-              <ContactLink src={linkedin} text="LinkedIn" />
+              <ContactLink src={linkedin} text="LinkedIn" path='https://www.linkedin.com/in/luan-le-7671b9342/'/>
 
-              <ContactLink src={cv} text="CV" />
+              <ContactLink src={cv} text="CV" path='cv.pdf' />
 
             </div>
 
