@@ -14,8 +14,8 @@ type ProjectLayoutProps = {
   images: string[]
   theme: 'light' | 'dark'
   isInProgress?: boolean
-  livePath: string
-  gitHubPath: string
+  livePath?: string
+  gitHubPath?: string
 }
 
 function ProjectLayout({ title, overview, type, features, stack, lesson, images, theme, isInProgress, livePath, gitHubPath }: ProjectLayoutProps) {
