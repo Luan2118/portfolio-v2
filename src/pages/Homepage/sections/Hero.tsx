@@ -3,7 +3,7 @@ import NavItem from "../components/NavItem";
 function Hero() {
   return (
     <div id="hero" className="h-dvh bg-[#FFFBF4] flex flex-col justify-between p-8 font-[Inter]">
-      <aside className="grid grid-cols-2 items-center sm:grid-cols-3">
+      <aside className="fixed top-8 left-8 right-8 l grid grid-cols-2 items-center sm:grid-cols-3 text-[#D4D4D4] mix-blend-difference antialiased">
         <div>
           <NavItem label="LL" path="#hero"/>
         </div>

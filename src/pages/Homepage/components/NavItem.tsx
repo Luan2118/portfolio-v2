@@ -5,7 +5,7 @@ type NavItemProps = {
 
 function NavItem({label, path}: NavItemProps) {
   return (
-    <a href={path} className="font-medium text-sm sm:text-lg ">
+    <a href={path} className="text-sm sm:text-lg ">
       {label}
     </a>
   )
