@@ -98,8 +98,8 @@ function Contact() {
 
             </div>
 
-            <div className="w-[200px] sm:w-[240px] 2xl:w-[300px]">
-              <p className="text-xl sm:text-2xl 2xl:text-3xl font-[Judson] border-b">leluanvn21@seznam.cz</p>
+            <div className="w-fit">
+              <p className="text-xl sm:text-2xl 2xl:text-3xl font-[Judson] border-b pr-5fix: ">leluanvn21@seznam.cz</p>
             </div>
           </div>
         </div>
