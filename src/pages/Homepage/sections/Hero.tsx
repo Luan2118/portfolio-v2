@@ -1,25 +1,18 @@
 import NavItem from "../components/NavItem";
-import menuIcon from "../../../assets/icons/menu.png"
 
 function Hero() {
   return (
     <div id="hero" className="h-dvh bg-[#FFFBF4] flex flex-col justify-between p-8 font-[Inter]">
-      <aside className="grid grid-cols-2 items-center xs:grid-cols-3">
+      <aside className="grid grid-cols-2 items-center sm:grid-cols-3">
         <div>
           <NavItem label="LL" path="#hero"/>
         </div>
 
-        <p className="hidden text-sm text-center xs:block sm:text-lg">
+        <p className="hidden text-sm text-center sm:block sm:text-lg">
           Software Developer - Pilsen
         </p>
 
-        <nav className="flex justify-end lg:hidden">
-          <button className="w-[20px]">
-            <img src={menuIcon} alt="Menu" />
-          </button>
-        </nav>
-
-        <nav className="hidden flex justify-end gap-10 lg:flex">
+        <nav className="flex justify-end gap-6 md:gap-10 lg:flex">
           <NavItem label="Projects" path="#projects"/>
           <NavItem label="Contact" path="#contact"/>
         </nav>
