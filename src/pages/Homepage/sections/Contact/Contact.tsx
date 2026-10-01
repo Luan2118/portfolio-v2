@@ -99,7 +99,7 @@ function Contact() {
             </div>
 
             <div className="w-fit">
-              <p className="text-xl sm:text-2xl 2xl:text-3xl font-[Judson] border-b pr-5fix: ">leluanvn21@seznam.cz</p>
+              <p className="text-xl sm:text-2xl 2xl:text-3xl font-[Judson] border-b pr-5">leluanvn21@seznam.cz</p>
             </div>
           </div>
         </div>
