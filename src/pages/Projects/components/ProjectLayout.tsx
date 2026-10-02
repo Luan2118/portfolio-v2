@@ -3,7 +3,6 @@ import blackArrow from "../../../assets/icons/blackArrow.png"
 import whiteArrow from "../../../assets/icons/whiteArrow.png"
 import ProjectLink from "./ProjectLink";
 import { motion, type Variants } from "motion/react";
-import { useRef, useState } from "react";
 
 
 type ProjectLayoutProps = {
