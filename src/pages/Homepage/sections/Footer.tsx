@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { div } from "motion/react-client";
 
 function Footer() {
   return (
