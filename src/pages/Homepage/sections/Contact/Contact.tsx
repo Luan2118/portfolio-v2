@@ -6,6 +6,7 @@ import FormField from "./components/FormField";
 import Footer from "../Footer";
 import { useEffect, useState } from "react";
 import { CircleCheck, CircleX } from "lucide-react";
+import { motion } from "motion/react";
 
 function Contact() {
   const [status, setStatus] = useState('');
@@ -38,9 +39,9 @@ function Contact() {
       );
 
       if (response.ok) {
-      setStatus("success");
-      form.reset();
-    }
+        setStatus("success");
+        form.reset();
+      }
 
     } catch (error) {
       console.error(error)
@@ -53,8 +54,14 @@ function Contact() {
     <>
       <div id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col gap-15 py-15 px-5 xs:px-15 sm:px-20 md:gap-40 md:py-30 lg:py-40 lg:px-40  2xl:px-80">
 
-        <div className="mx-auto">
-          <p className="text-[clamp(56px,10vw,128px)] leading-none font-[Judson] text-center">Get in Contact</p>
+        <div className="mx-auto overflow-hidden">
+          <motion.p
+            initial={{ opacity: 0, y: '100%' }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-[clamp(56px,10vw,128px)] leading-none font-[Judson] text-center">
+            Get in Contact
+          </motion.p >
         </div>
 
 
@@ -69,7 +76,12 @@ function Contact() {
 
               <FormField name="message" id="message" label="Your message" placeholder="Tell me about the opportunity..." />
 
-              <button className="self-end text-sm lg:text-lg font-[Inter] mt-3 border px-3 border-[#292725] text-[#292725] rounded-sm cursor-pointer xs:px-5 md:px-6 ">Submit</button>
+              <motion.button
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.8, ease: "easeOut" }}
+                className="self-end text-sm lg:text-lg font-[Inter] mt-3  px-3 border-[#292725] text-[#292725] rounded-sm cursor-pointer xs:px-5 md:px-6 ">Submit
+              </motion.button>
             </form>
 
             {status === "success" && (
@@ -98,8 +110,17 @@ function Contact() {
 
             </div>
 
-            <div className="w-fit">
-              <p className="text-xl sm:text-2xl 2xl:text-3xl font-[Judson] border-b pr-5">leluanvn21@seznam.cz</p>
+            <div className="w-fit group">
+              <div className="overflow-hidden">
+                <motion.p
+                  initial={{ opacity: 0, y: '100%' }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className=" text-xl sm:text-2xl 2xl:text-3xl font-[Judson]  pr-5">
+                  leluanvn21@seznam.cz
+                </motion.p>
+              </div>
+              <hr className="scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-600" />
             </div>
           </div>
         </div>
