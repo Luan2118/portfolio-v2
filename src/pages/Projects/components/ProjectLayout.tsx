@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import blackArrow from "../../../assets/icons/blackArrow.png"
 import whiteArrow from "../../../assets/icons/whiteArrow.png"
 import ProjectLink from "./ProjectLink";
+import { motion, type Variants } from "motion/react";
 
 
 type ProjectLayoutProps = {
@@ -18,6 +19,23 @@ type ProjectLayoutProps = {
   gitHubPath?: string
 }
 
+const container = {
+  hidden: { opacity: 0, },
+  visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
+
+}
+
+const item: Variants = {
+  hidden: { opacity: 0, y: "100%" },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+}
+
+const buttonVariant: Variants = {
+  hidden: { opacity: 0, x: 20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+}
+
+
 function ProjectLayout({ title, overview, type, features, stack, lesson, images, theme, isInProgress, livePath, gitHubPath }: ProjectLayoutProps) {
 
   const linkPath =
@@ -30,28 +48,52 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
   const isDark = theme === 'dark';
 
+  console.log(overview)
   return (
-    <div className={`min-h-dvh grid grid-cols-1 xl:grid-cols-2 pb-5 px-5 xl:pb-0 xl:px-0 xl:h-dvh  ${isDark ? 'bg-[#171512] text-[#FFFBF4]' : 'bg-[#FFFBF4] text-[#171512]'}`}>
+    <motion.div
+      variants={container} initial="hidden" animate="visible"
+      className={`min-h-dvh grid grid-cols-1 xl:grid-cols-2 pb-5 px-5 xl:pb-0 xl:px-0 xl:h-dvh  ${isDark ? 'bg-[#171512] text-[#FFFBF4]' : 'bg-[#FFFBF4] text-[#171512]'}`}>
 
       <div className={`contents xl:flex xl:flex-col ${isDark ? 'bg-[#171512]' : 'bg-[#FFFBF4]'}`}>
 
         <Link to='/' className="mb-15 w-10 xl:w-12 mt-4 xl:ml-4">
-          <img src={isDark ? whiteArrow : blackArrow} alt="" />
+          <motion.img
+            variants={buttonVariant}
+            src={isDark ? whiteArrow : blackArrow}
+            alt="" />
         </Link>
 
 
         <div className="order-1 flex flex-col gap-4 md:gap-10 xl:px-20 2xl:px-35 ">
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[Judson] text-center">{title}</h1>
+          <div className="overflow-hidden">
+            <motion.h1
+              variants={item}
+              className="text-4xl md:text-5xl lg:text-6xl font-[Judson] text-center">
+              {title}
+            </motion.h1>
+          </div>
 
           {isInProgress ? <p className="font-[Inter] text-3xl text-[#A84A3A] mx-auto tracking-[0.3rem] mt-15 mb-15 text-center">WEBSITE REDESIGN - IN PROGRESS</p>
             : null}
 
           <div className="mt-5">
-            <p className="text-xl lg:text-xl font-[Judson] py-4">Project Overview</p>
-            <p className="text-sm max-w-[680px]">
-              {overview}
-            </p>
+
+            <div className="overflow-hidden">
+              <motion.p
+                variants={item}
+                className="text-xl lg:text-xl font-[Judson] py-4">
+                Project Overview
+              </motion.p>
+            </div>
+
+            <div className="overflow-hidden">
+
+              <motion.p variants={item} className="text-sm max-w-[680px]">
+                {overview}
+              </motion.p>
+            </div>
+
           </div>
 
 
@@ -59,31 +101,38 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
           {isInProgress ? null :
             <>
               <div>
-                <p className="text-xl lg:text-xl font-[Judson] py-4">Details</p>
+                <motion.p variants={item} className="text-xl lg:text-xl font-[Judson] py-4">Details</motion.p>
 
                 <dl className="text-sm w-fit">
-                  <div className="grid grid-cols-[80px_1fr] gap-4 border-b border-black/20 pb-2">
+                  <motion.div variants={item} className="grid grid-cols-[80px_1fr] gap-4 border-b border-black/20 pb-2">
                     <dt className="font-medium uppercase tracking-wide">Type</dt>
                     <dd>{type}</dd>
-                  </div>
+                  </motion.div>
 
-                  <div className="grid grid-cols-[80px_1fr] gap-4 border-b border-black/20 py-2">
+                  <motion.div variants={item} className="grid grid-cols-[80px_1fr] gap-4 border-b border-black/20 py-2">
                     <dt className="font-medium uppercase tracking-wide">Features</dt>
                     <dd>{features}</dd>
-                  </div>
+                  </motion.div>
 
-                  <div className="grid grid-cols-[80px_1fr] gap-4 pt-2">
+                  <motion.div variants={item} className="grid grid-cols-[80px_1fr] gap-4 pt-2">
                     <dt className="font-medium uppercase tracking-wide">Stack</dt>
                     <dd>{stack}</dd>
-                  </div>
+                  </motion.div>
                 </dl>
               </div>
 
               <div>
-                <p className="text-xl lg:text-xl font-[Judson] py-4">What I learned</p>
-                <p className="text-sm max-w-[680px]">
+                <motion.p
+                  variants={item}
+                  className="text-xl lg:text-xl font-[Judson] py-4">
+                  What I learned
+                </motion.p>
+
+                <motion.p
+                  variants={item}
+                  className="text-sm max-w-[680px]">
                   {lesson}
-                </p>
+                </motion.p>
               </div>
             </>
           }
@@ -95,7 +144,14 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
               <ProjectLink label="Live" theme={theme} projectPath={livePath} />
               <ProjectLink label="Github" theme={theme} projectPath={gitHubPath} />
             </div>
-            <Link to={linkPath} className={`text-xs xs:text-sm sm:text-base rounded-sm border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}>Next Project</Link>
+            <Link to={linkPath}>
+              <motion.div
+                variants={buttonVariant}
+                className={`text-xs xs:text-sm sm:text-base rounded-sm border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}
+              >
+                Next Project
+              </motion.div>
+            </Link>
           </div>
         }
 
@@ -109,9 +165,11 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
         })}
       </div>
 
-    </div>
+
+    </motion.div >
   )
 }
 
 
 export default ProjectLayout;
+
