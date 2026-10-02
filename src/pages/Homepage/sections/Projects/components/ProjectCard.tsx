@@ -49,7 +49,7 @@ function ProjectCard({ name, description }: ProjectCardProps) {
       <div className="overflow-hidden">
         <motion.div
           style={{ x, opacity }}
-          className="flex flex-col group xl:mt-10 px-4 py-6 text-start"
+          className="flex flex-col group xl:mt-10 px-4 py-6 text-start "
         >
           <div className="flex justify-between">
             <p className="text-[clamp(20px,4vw,40px)] leading-none font-[Judson] ">{name}</p>

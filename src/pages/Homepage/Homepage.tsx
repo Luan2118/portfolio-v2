@@ -5,7 +5,7 @@ import Projects from "./sections/Projects/Projects";
 
 function Homepage() {
   return (
-    <div>
+    <div className="overflow-x-clip">
       <Hero />
 
       <Projects />
