@@ -48,7 +48,7 @@ function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: '100%' }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.9 }}
           className="flex flex-col text-[clamp(110px,calc(50.14px+15.962vw),280px)] md:flex-row md:gap-10 font-[Judson] leading-[0.80]"
         >
           <span>Luan</span>
