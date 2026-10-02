@@ -115,7 +115,7 @@ function Contact() {
                 <motion.p
                   initial={{ opacity: 0, y: '100%' }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  transition={{ duration: 1, ease: "easeOut" }}
                   className=" text-xl sm:text-2xl 2xl:text-3xl font-[Judson]  pr-5">
                   leluanvn21@seznam.cz
                 </motion.p>

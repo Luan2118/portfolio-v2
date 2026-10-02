@@ -9,9 +9,9 @@ type ContactLinkProps = {
 function ContactLink({ text, src, path }: ContactLinkProps) {
   return (
     <motion.a
-      initial={{ opacity: 0, x: 60 }}
+      initial={{ opacity: 0, x: -40 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1.8, ease: "easeOut" }}
+      transition={{ duration: 1, ease: "easeOut" }}
       href={path}
       target='_blank'
       rel="noopener noreferrer"

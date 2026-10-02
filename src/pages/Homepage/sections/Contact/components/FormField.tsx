@@ -11,9 +11,9 @@ type FormFieldProps = {
 function FormField({ id, label, placeholder, name, type }: FormFieldProps) {
   return (
     <motion.div
-      initial={{opacity: 0, x: 60}}
+      initial={{opacity: 0, x: 40}}
       whileInView={{opacity: 1, x: 0}}
-      transition={{ duration: 1.8, ease: "easeOut"}}
+      transition={{ duration: 1, ease: "easeOut"}}
       className="flex flex-col group gap-2 text-sm lg:text-lg font-[Inter]">
       <label htmlFor={id} className="mt-2">{label}</label>
       {id === 'message' ?
