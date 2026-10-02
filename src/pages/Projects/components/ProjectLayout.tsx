@@ -3,6 +3,7 @@ import blackArrow from "../../../assets/icons/blackArrow.png"
 import whiteArrow from "../../../assets/icons/whiteArrow.png"
 import ProjectLink from "./ProjectLink";
 import { motion, type Variants } from "motion/react";
+import { useRef, useState } from "react";
 
 
 type ProjectLayoutProps = {
@@ -48,7 +49,6 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
   const isDark = theme === 'dark';
 
-  console.log(overview)
   return (
     <motion.div
       variants={container} initial="hidden" animate="visible"
@@ -160,11 +160,22 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
       <div className=" order-2 xl:overflow-y-scroll mt-15 xl:mt-0 ">
         {images?.map((image) => {
           return (
-            <img src={image} alt="" key={image} className=""/>
+            <motion.img
+              initial={{ opacity: 0.9, filter: "blur(1.5px) saturate(0.96) brightness(0.98)" }}
+              whileInView={{ opacity: 1, filter: "blur(0px) saturate(1) brightness(1)" }}
+              transition={{
+                duration: 0.45,
+                ease: "easeOut",
+              }}
+              viewport={{ amount: 0.7 }}
+
+              src={image}
+              alt=""
+              key={image}
+            />
           )
         })}
       </div>
-
 
     </motion.div >
   )
