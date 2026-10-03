@@ -3,6 +3,7 @@ import blackArrow from "../../../assets/icons/blackArrow.png"
 import whiteArrow from "../../../assets/icons/whiteArrow.png"
 import ProjectLink from "./ProjectLink";
 import { motion, type Variants } from "motion/react";
+import { useState, useEffect } from "react";
 
 
 type ProjectLayoutProps = {
@@ -47,6 +48,27 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
     : "border-[#292725] text-[#292725]"
 
   const isDark = theme === 'dark';
+
+
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  function getWindowDimensions() {
+    const { innerWidth: width } = window;
+    return {
+      width
+    };
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const isXL = windowDimensions.width >= 1280
 
   return (
     <motion.div
@@ -156,25 +178,36 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
       </div>
 
-      <div className=" order-2 xl:overflow-y-scroll mt-15 xl:mt-0 ">
-        {images?.map((image) => {
+      <motion.div
+        className="order-2 xl:overflow-y-scroll mt-15 xl:mt-0 
+        [--entry-x:0%]
+        [--entry-y:0%]
+        [--entry-scale:1]
+
+        xl:[--entry-x:-130%]
+        xl:[--entry-y:45%]
+        xl:[--entry-scale:0.3]
+        "
+        initial={{ x: "var(--entry-x)", y: "var(--entry-y)", scale: "var(--entry-scale)", opacity: 0 }}
+        animate={{ x: 0, y: 0, scale: 1, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+
+      >
+        {images?.map((image, index) => {
           return (
             <motion.img
-              initial={{ opacity: 0.9, filter: "blur(1.5px) saturate(0.96) brightness(0.98)" }}
-              whileInView={{ opacity: 1, filter: "blur(0px) saturate(1) brightness(1)" }}
-              transition={{
-                duration: 0.45,
-                ease: "easeOut",
-              }}
-              viewport={{ amount: 0.7 }}
-
+              initial={isXL ? index === 0 ? undefined : { opacity: 0 } : { opacity: 0}}
+              animate={isXL ? index == 0 ? undefined : { opacity: 1 } : undefined}
+              whileInView={isXL ? undefined : {opacity: 1}}
+              viewport={{amount: 0.15}}
+              transition={isXL ? { delay: 1, duration: 0.9, ease: "easeIn" } : { duration: 0.9, ease: "easeOut" }}
               src={image}
               alt=""
               key={image}
             />
           )
         })}
-      </div>
+      </motion.div>
 
     </motion.div >
   )
