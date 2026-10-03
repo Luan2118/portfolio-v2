@@ -188,8 +188,8 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
         [--entry-scale:1]
 
         xl:[--entry-x:-130%]
-        xl:[--entry-y:45%]
-        xl:[--entry-scale:0.3]
+        xl:[--entry-y:0%]
+        xl:[--entry-scale:1]
         "
         initial={{ x: "var(--entry-x)", y: "var(--entry-y)", scale: "var(--entry-scale)", opacity: 0 }}
         animate={{ x: 0, y: 0, scale: 1, opacity: 1 }}
