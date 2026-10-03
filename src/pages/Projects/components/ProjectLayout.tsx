@@ -55,7 +55,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
       <div className={`contents xl:flex xl:flex-col ${isDark ? 'bg-[#171512]' : 'bg-[#FFFBF4]'}`}>
 
-        <Link to='/' className="mb-15 w-10 xl:w-12 mt-4 xl:ml-4">
+        <Link to='/' className="mb-8 2xl:mb-15 w-10 xl:w-12 mt-4 xl:ml-4 w-[clamp(20px,3vw,30px)] h-[clamp(20px,3vw,30px)]">
           <motion.img
             variants={buttonVariant}
             src={isDark ? whiteArrow : blackArrow}
@@ -63,12 +63,12 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
         </Link>
 
 
-        <div className="order-1 flex flex-col gap-4 md:gap-10 xl:px-20 2xl:px-35 ">
+        <div className="order-1 flex flex-col gap-4 2xl:gap-10 xl:px-15 2xl:px-35 ">
 
           <div className="overflow-hidden">
             <motion.h1
               variants={item}
-              className="text-4xl md:text-5xl lg:text-6xl font-[Judson] text-center">
+              className="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-[Judson] text-center">
               {title}
             </motion.h1>
           </div>
@@ -123,7 +123,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
               <div>
                 <motion.p
                   variants={item}
-                  className="text-xl lg:text-xl font-[Judson] py-4">
+                  className="text-lg xl:text-xl font-[Judson] py-4">
                   What I learned
                 </motion.p>
 
@@ -138,7 +138,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
         </div>
 
         {isInProgress ? null :
-          <div className="order-3 pb-4 flex justify-between  mt-10  xl:px-20 2xl:px-35  xl:mt-15 ">
+          <div className="order-3 pb-4 flex justify-between  mt-10  xl:px-15 2xl:px-35">
             <div className="flex gap-2 md:gap-5">
               <ProjectLink label="Live" theme={theme} projectPath={livePath} />
               <ProjectLink label="Github" theme={theme} projectPath={gitHubPath} />
@@ -146,7 +146,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
             <Link to={linkPath}>
               <motion.div
                 variants={buttonVariant}
-                className={`text-xs xs:text-sm sm:text-base rounded-sm border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}
+                className={`text-xs xs:text-sm 2xl:text-base rounded-sm border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}
               >
                 Next Project
               </motion.div>

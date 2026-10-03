@@ -24,7 +24,7 @@ function ProjectLink({ label, theme, projectPath, }: ProjectLinkProps) {
     href={projectPath} 
     target='_blank' 
     rel="noopener noreferrer" 
-    className={`text-xs xs:text-sm sm:text-base border rounded-sm py-1 px-3 xs:px-6 md:px-8 ${buttonStyle}`}>
+    className={`text-xs xs:text-sm 2xl:text-base border rounded-sm py-1 px-3 xs:px-6 md:px-8 ${buttonStyle}`}>
       {label}
     </motion.a>
   )
