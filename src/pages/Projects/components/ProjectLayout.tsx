@@ -4,6 +4,7 @@ import whiteArrow from "../../../assets/icons/whiteArrow.png"
 import ProjectLink from "./ProjectLink";
 import { motion, type Variants } from "motion/react";
 import { useState, useEffect } from "react";
+import scrollToTop from "../../Homepage/components/scrollToTop";
 
 
 type ProjectLayoutProps = {
@@ -49,10 +50,6 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
   const isDark = theme === 'dark';
 
-  function scrollToTop() {
-    window.scrollTo(0, 0)
-  }
-  
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   function getWindowDimensions() {

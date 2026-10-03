@@ -2,6 +2,7 @@ import projectsArrow from "../../../../../assets/icons/projectsArrow.png";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import scrollToTop from "../../../components/scrollToTop";
 
 type ProjectCardProps = {
   name: string
@@ -41,7 +42,7 @@ function ProjectCard({ name, description }: ProjectCardProps) {
   )
 
   return (
-    <Link to={link} ref={projectCardRef}>
+    <Link to={link} onClick={scrollToTop} ref={projectCardRef}>
       <div className="overflow-hidden">
         <motion.div
           style={{ x, opacity }}
