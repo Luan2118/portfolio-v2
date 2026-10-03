@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { useLayoutEffect } from "react";
 
 type PageTransitionProps = {
   theme: 'dark' | 'light'
@@ -11,6 +12,11 @@ function PageTransition({ theme, children, page }: PageTransitionProps) {
     theme === "dark"
       ? "bg-[#211E1A]"
       : "bg-[#FAF8F4]"
+
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
 

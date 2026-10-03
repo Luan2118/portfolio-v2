@@ -4,7 +4,6 @@ import whiteArrow from "../../../assets/icons/whiteArrow.png"
 import ProjectLink from "./ProjectLink";
 import { motion, type Variants } from "motion/react";
 import { useState, useEffect } from "react";
-import scrollToTop from "../../Homepage/components/scrollToTop";
 
 
 type ProjectLayoutProps = {
@@ -165,7 +164,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
               <ProjectLink label="Live" theme={theme} projectPath={livePath} />
               <ProjectLink label="Github" theme={theme} projectPath={gitHubPath} />
             </div>
-            <Link to={linkPath} onClick={scrollToTop}>
+            <Link to={linkPath}>
               <motion.div
                 variants={buttonVariant}
                 className={`text-xs xs:text-sm 2xl:text-base rounded-sm border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}
