@@ -182,7 +182,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
       </div>
 
       <motion.div
-        className="order-2 xl:overflow-y-scroll mt-15 xl:mt-0 
+        className="order-2 xl:overflow-y-scroll mt-15 xl:mt-0  [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
         [--entry-x:0%]
         [--entry-y:0%]
         [--entry-scale:1]
