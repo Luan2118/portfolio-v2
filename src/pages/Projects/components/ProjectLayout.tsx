@@ -49,7 +49,10 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
   const isDark = theme === 'dark';
 
-
+  function scrollToTop() {
+    window.scrollTo(0, 0)
+  }
+  
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   function getWindowDimensions() {
@@ -165,7 +168,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
               <ProjectLink label="Live" theme={theme} projectPath={livePath} />
               <ProjectLink label="Github" theme={theme} projectPath={gitHubPath} />
             </div>
-            <Link to={linkPath}>
+            <Link to={linkPath} onClick={scrollToTop}>
               <motion.div
                 variants={buttonVariant}
                 className={`text-xs xs:text-sm 2xl:text-base rounded-sm border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}

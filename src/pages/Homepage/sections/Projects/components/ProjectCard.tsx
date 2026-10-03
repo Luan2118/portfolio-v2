@@ -10,10 +10,6 @@ type ProjectCardProps = {
 
 function ProjectCard({ name, description }: ProjectCardProps) {
 
-  function scrollToTop() {
-    window.scrollTo(0, 0)
-  }
-
   const link =
     name === 'Gym Tracker' ? '/gym-tracker' :
       name === 'Finance Tracker' ? '/finance-tracker' :
@@ -45,7 +41,7 @@ function ProjectCard({ name, description }: ProjectCardProps) {
   )
 
   return (
-    <Link to={link} onClick={scrollToTop} ref={projectCardRef}>
+    <Link to={link} ref={projectCardRef}>
       <div className="overflow-hidden">
         <motion.div
           style={{ x, opacity }}
