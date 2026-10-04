@@ -3,7 +3,7 @@ import ProjectCard from "./components/ProjectCard";
 
 function Projects() {
   return (
-    <div id="projects" className="bg-[#171512] text-[#FFFBF4] h-screen flex flex-col p-5 xl:px-15 2xl:px-60 2xl:py-10">
+    <div id="projects" className="bg-[#171512] text-[#FFFBF4] min-h-svh flex flex-col p-5 xl:px-15 2xl:px-60 2xl:py-10">
 
       <div className="flex flex-1 mt-3">
         <p className="text-[clamp(24px,6vw,60px)] leading-none font-[Judson] self-center">Projects</p>
