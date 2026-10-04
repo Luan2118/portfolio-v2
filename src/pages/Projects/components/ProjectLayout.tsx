@@ -109,7 +109,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
             <div className="overflow-hidden">
 
-              <motion.p variants={item} className="text-sm max-w-[680px] max-h-[80px]">
+              <motion.p variants={item} className="text-sm max-w-[680px] xl:max-h-[80px]">
                 {overview}
               </motion.p>
             </div>
