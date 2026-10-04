@@ -84,7 +84,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
         </Link>
 
 
-        <div className="order-1 flex flex-col gap-4 2xl:gap-10 xl:px-15 2xl:px-35 ">
+        <div className="order-1 flex flex-col gap-4 2xl:gap-10 xl:px-15 2xl:px-30 ">
 
           <div className="overflow-hidden">
             <motion.h1
@@ -97,7 +97,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
           {isInProgress ? <p className="font-[Inter] text-3xl text-[#A84A3A] mx-auto tracking-[0.3rem] mt-15 mb-15 text-center">WEBSITE REDESIGN - IN PROGRESS</p>
             : null}
 
-          <div className="mt-5">
+          <div >
 
             <div className="overflow-hidden">
               <motion.p
@@ -109,7 +109,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
             <div className="overflow-hidden">
 
-              <motion.p variants={item} className="text-sm max-w-[680px]">
+              <motion.p variants={item} className="text-sm max-w-[680px] max-h-[80px]">
                 {overview}
               </motion.p>
             </div>
