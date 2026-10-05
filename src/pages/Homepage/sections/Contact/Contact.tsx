@@ -7,6 +7,7 @@ import Footer from "../Footer";
 import { useEffect, useState } from "react";
 import { CircleCheck, CircleX } from "lucide-react";
 import { motion } from "motion/react";
+import useCursor from "../../../../hooks/useCursor";
 
 function Contact() {
   const [status, setStatus] = useState('');
@@ -49,10 +50,11 @@ function Contact() {
     }
   };
 
+  const { setIsHover } = useCursor();
 
   return (
     <>
-      <div id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col px-5 pt-5 gap-3 justify-between md:px-15 xl:px-40 2xl:px-65">
+      <div id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col px-5 pt-5 gap-3 justify-between md:px-15 xl:px-40 2xl:px-65 text-[#171512]">
 
         <div className="overflow-hidden  my-auto">
           <motion.p
@@ -80,7 +82,9 @@ function Contact() {
                 initial={{ opacity: 0, x: 60 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.8, ease: "easeOut" }}
-                className="self-end text-sm md:text-base lg:text-lg font-[Inter] mt-1 sm:mt-3 px-3 border-[#292725] text-[#292725] rounded-sm cursor-pointer xs:px-5 md:px-6 ">Submit
+                className="self-end text-sm md:text-base lg:text-lg font-[Inter] mt-1 sm:mt-3 px-3 border-[#292725] rounded-sm cursor-pointer xs:px-5 md:px-6 "
+                onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
+                >Submit
               </motion.button>
             </form>
 
@@ -110,7 +114,7 @@ function Contact() {
 
             </div>
 
-            <div className="w-fit group">
+            <div className="w-fit group" onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
               <div className="overflow-hidden">
                 <motion.a
                   initial={{ opacity: 0, y: '100%' }}
@@ -118,11 +122,11 @@ function Contact() {
                   transition={{ duration: 1, ease: "easeOut" }}
                   className=" text-lg sm:text-2xl 2xl:text-3xl font-[Judson]  pr-5"
                   href="mailto:leluanvn21@seznam.cz"
-                  >
+                >
                   leluanvn21@seznam.cz
                 </motion.a>
               </div>
-              <hr className="scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-600" />
+              <hr className="scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-600 border-0 h-px bg-white mix-blend-difference" />
             </div>
           </div>
         </div>
