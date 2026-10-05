@@ -7,11 +7,16 @@ import HospodaPodBousovem from './pages/Projects/HospodaPodBousovem'
 import { AnimatePresence } from 'motion/react'
 import PageTransition from './components/PageTransition'
 import CustomCursor from './components/CustomCursor'
+import { CursorContext } from './context/CursorContext'
+import {  useState } from 'react'
 
 function App() {
   const location = useLocation();
+
+  const [isHover, setIsHover] = useState(false);
+
   return (
-    <>
+    <CursorContext value={{isHover, setIsHover}} >
       <CustomCursor />
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
@@ -21,7 +26,7 @@ function App() {
           <Route path="/hospudka-pod-bousovem" element={<PageTransition theme='light'><HospodaPodBousovem /></PageTransition>} />
         </Routes>
       </AnimatePresence>
-    </>
+    </CursorContext>
   )
 }
 
