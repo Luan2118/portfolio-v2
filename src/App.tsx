@@ -6,21 +6,22 @@ import FinanceTracker from './pages/Projects/FinanceTracker'
 import HospodaPodBousovem from './pages/Projects/HospodaPodBousovem'
 import { AnimatePresence } from 'motion/react'
 import PageTransition from './components/PageTransition'
+import CustomCursor from './components/CustomCursor'
 
 function App() {
   const location = useLocation();
   return (
-    <AnimatePresence mode='wait'>
-      <Routes location={location} key={location.pathname}>
-        <Route path='/' element={<PageTransition theme='light' page='homePage'><Homepage /></PageTransition>} />
-        <Route path="/gym-tracker" element={<PageTransition theme='light'><GymTracker /></PageTransition>} />
-        <Route path="/finance-tracker" element={<PageTransition theme='dark'><FinanceTracker /></PageTransition>} />
-        <Route path="/hospudka-pod-bousovem" element={<PageTransition theme='light'><HospodaPodBousovem /></PageTransition>} />
-      </Routes>
-
-       
-
-    </AnimatePresence>
+    <>
+      <CustomCursor />
+      <AnimatePresence mode='wait'>
+        <Routes location={location} key={location.pathname}>
+          <Route path='/' element={<PageTransition theme='light' page='homePage'><Homepage /></PageTransition>} />
+          <Route path="/gym-tracker" element={<PageTransition theme='light'><GymTracker /></PageTransition>} />
+          <Route path="/finance-tracker" element={<PageTransition theme='dark'><FinanceTracker /></PageTransition>} />
+          <Route path="/hospudka-pod-bousovem" element={<PageTransition theme='light'><HospodaPodBousovem /></PageTransition>} />
+        </Routes>
+      </AnimatePresence>
+    </>
   )
 }
 
