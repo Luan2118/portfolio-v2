@@ -20,6 +20,8 @@ function FinanceTracker() {
       theme='dark'
       livePath='https://finance-tracker-project-sigma.vercel.app/'
       gitHubPath='https://github.com/Luan2118/finance-tracker'
+      next='/hospudka-pod-bousovem'
+      prev='/gym-tracker'
     />
   )
 }

@@ -19,6 +19,8 @@ type ProjectLayoutProps = {
   isInProgress?: boolean
   livePath?: string
   gitHubPath?: string
+  next?: '/gym-tracker' | '/hospudka-pod-bousovem' | '/finance-tracker'
+  prev?: '/gym-tracker' | '/hospudka-pod-bousovem' | '/finance-tracker'
 }
 
 const container = {
@@ -38,11 +40,8 @@ const buttonVariant: Variants = {
 }
 
 
-function ProjectLayout({ title, overview, type, features, stack, lesson, images, theme, isInProgress, livePath, gitHubPath }: ProjectLayoutProps) {
+function ProjectLayout({ title, overview, type, features, stack, lesson, images, theme, isInProgress, livePath, gitHubPath, next, prev }: ProjectLayoutProps) {
 
-  const linkPath =
-    title === 'Gym Tracker' ? '/finance-tracker' :
-      title === 'Finance Tracker' ? '/hospudka-pod-bousovem' : '/'
 
   const linkStyle = theme === "dark"
     ? "border-white text-white"
@@ -99,7 +98,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
             </motion.h1>
           </div>
 
-          {isInProgress ? <p className="font-[Inter] text-3xl text-[#A84A3A] mx-auto tracking-[0.3rem] mt-15 mb-15 text-center">WEBSITE REDESIGN - IN PROGRESS</p>
+          {isInProgress ? <p className="font-[Inter] text-3xl text-[#A84A3A] mx-auto tracking-[0.3rem] mt-10 mb-5 text-center">WEBSITE REDESIGN - IN PROGRESS</p>
             : null}
 
           <div >
@@ -169,17 +168,37 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
               <ProjectLink label="Live" theme={theme} projectPath={livePath} />
               <ProjectLink label="Github" theme={theme} projectPath={gitHubPath} />
             </div>
-            
-            <Link to={linkPath}>
-              <motion.div
-                variants={buttonVariant}
-                className={`text-xs xs:text-sm 2xl:text-base rounded-sm border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}
 
-                onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
-              >
-                Next Project
-              </motion.div>
-            </Link>
+            <div className="flex gap-2 md:gap-5">
+
+              {prev ?
+                <Link to={prev}>
+                  <motion.div
+                    variants={buttonVariant}
+                    className={`text-xs xs:text-sm 2xl:text-base rounded-sm border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}
+
+                    onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
+                  >
+                    Prev
+                  </motion.div>
+                </Link> : null
+              }
+
+              {next ?
+                <Link to={next}>
+                  <motion.div
+                    variants={buttonVariant}
+                    className={`text-xs xs:text-sm 2xl:text-base rounded-sm border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}
+
+                    onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
+                  >
+                    Next
+                  </motion.div>
+                </Link> : null
+              }
+
+
+            </div>
           </div>
         }
 

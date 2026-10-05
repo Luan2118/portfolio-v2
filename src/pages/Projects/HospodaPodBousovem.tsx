@@ -6,11 +6,12 @@ import sideView from "../../assets/images/hospoda-pod-bousovem/side-view.png"
 function HospodaPodBousovem() {
   return (
     <ProjectLayout 
-      title="Hospůdka pod Boušovem"
-      overview="Local business website for a village pub, focused on presenting the venue, menu and essential visitor information."
+      title= 'Hospůdka pod Boušovem'
+      overview= 'Local business website for a village pub, focused on presenting the venue, menu and essential visitor information.'
       isInProgress={true}
       images={[sideView, frontView, sideView]}
-      theme="light"
+      theme='light'
+      prev= '/finance-tracker'
     />
   )
 }

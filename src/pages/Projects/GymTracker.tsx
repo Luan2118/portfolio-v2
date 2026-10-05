@@ -20,6 +20,8 @@ function GymTracker() {
       theme='light'
       livePath='https://gym-tracker-azure-tau.vercel.app/'
       gitHubPath='https://github.com/Luan2118/gym-tracker'
+      next='/finance-tracker'
+      
     />
   )
 }
