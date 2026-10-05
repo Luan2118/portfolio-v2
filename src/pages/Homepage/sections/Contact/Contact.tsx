@@ -112,13 +112,15 @@ function Contact() {
 
             <div className="w-fit group">
               <div className="overflow-hidden">
-                <motion.p
+                <motion.a
                   initial={{ opacity: 0, y: '100%' }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, ease: "easeOut" }}
-                  className=" text-lg sm:text-2xl 2xl:text-3xl font-[Judson]  pr-5">
+                  className=" text-lg sm:text-2xl 2xl:text-3xl font-[Judson]  pr-5"
+                  href="mailto:leluanvn21@seznam.cz"
+                  >
                   leluanvn21@seznam.cz
-                </motion.p>
+                </motion.a>
               </div>
               <hr className="scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-600" />
             </div>
