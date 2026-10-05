@@ -4,6 +4,7 @@ import whiteArrow from "../../../assets/icons/whiteArrow.png"
 import ProjectLink from "./ProjectLink";
 import { motion, type Variants } from "motion/react";
 import { useState, useEffect } from "react";
+import useCursor from "../../../hooks/useCursor";
 
 
 type ProjectLayoutProps = {
@@ -69,6 +70,8 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
   const isXL = windowDimensions.width >= 1280
 
+  const { setIsHover } = useCursor();
+
   return (
     <motion.div
       variants={container} initial="hidden" animate="visible"
@@ -80,7 +83,9 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
           <motion.img
             variants={buttonVariant}
             src={isDark ? whiteArrow : blackArrow}
-            alt="" />
+            alt=""
+            onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
+          />
         </Link>
 
 
@@ -159,15 +164,18 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
         </div>
 
         {isInProgress ? null :
-          <div className="order-3 pb-4 flex justify-between  mt-10  xl:px-15 2xl:px-35">
+          <div className="order-3 pb-4 flex justify-between  mt-10  xl:px-15 2xl:px-30">
             <div className="flex gap-2 md:gap-5">
               <ProjectLink label="Live" theme={theme} projectPath={livePath} />
               <ProjectLink label="Github" theme={theme} projectPath={gitHubPath} />
             </div>
+            
             <Link to={linkPath}>
               <motion.div
                 variants={buttonVariant}
                 className={`text-xs xs:text-sm 2xl:text-base rounded-sm border py-1 px-3 xs:px-6 md:px-8 ${linkStyle}`}
+
+                onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
               >
                 Next Project
               </motion.div>
@@ -195,10 +203,10 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
         {images?.map((image, index) => {
           return (
             <motion.img
-              initial={isXL ? index === 0 ? undefined : { opacity: 0 } : { opacity: 0}}
+              initial={isXL ? index === 0 ? undefined : { opacity: 0 } : { opacity: 0 }}
               animate={isXL ? index == 0 ? undefined : { opacity: 1 } : undefined}
-              whileInView={isXL ? undefined : {opacity: 1}}
-              viewport={{amount: 0.15}}
+              whileInView={isXL ? undefined : { opacity: 1 }}
+              viewport={{ amount: 0.15 }}
               transition={isXL ? { delay: 1, duration: 0.9, ease: "easeIn" } : { duration: 0.9, ease: "easeOut" }}
               src={image}
               alt=""

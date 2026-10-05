@@ -1,4 +1,5 @@
 import { motion, type Variants } from "framer-motion";
+import useCursor from "../../../hooks/useCursor";
 
 type ProjectLinkProps = {
   label: string
@@ -12,6 +13,9 @@ const item: Variants = {
 }
 
 function ProjectLink({ label, theme, projectPath, }: ProjectLinkProps) {
+
+    const { setIsHover } = useCursor();
+
   const buttonStyle = label === 'Live'
     ? "border-[#A84A3A] text-[#A84A3A]"
     : theme === "dark"
@@ -24,7 +28,9 @@ function ProjectLink({ label, theme, projectPath, }: ProjectLinkProps) {
     href={projectPath} 
     target='_blank' 
     rel="noopener noreferrer" 
-    className={`text-xs xs:text-sm 2xl:text-base border rounded-sm py-1 px-3 xs:px-6 md:px-8 ${buttonStyle}`}>
+    className={`text-xs xs:text-sm 2xl:text-base border rounded-sm py-1 px-3 xs:px-6 md:px-8 ${buttonStyle}`}
+    onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
+    >
       {label}
     </motion.a>
   )
