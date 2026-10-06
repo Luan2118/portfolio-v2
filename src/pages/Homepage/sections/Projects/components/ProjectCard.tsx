@@ -34,6 +34,8 @@ function ProjectCard({ name, description, category, image, activeImage, updateAc
     }
   }, [])
 
+  const { hoveredProject, setHoveredProject } = useCursor();
+
 
   return (
     <>
@@ -46,7 +48,11 @@ function ProjectCard({ name, description, category, image, activeImage, updateAc
         initial={{ x: 'var(--entry-x)', opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        onMouseEnter={() => updateActiveImage(image)}
+        onMouseEnter={() => {
+          setHoveredProject(name)
+          updateActiveImage(image)
+        }} onMouseLeave={() => setHoveredProject(null)}
+
       >
         <Link
           to={link}
@@ -101,11 +107,11 @@ function ProjectCard({ name, description, category, image, activeImage, updateAc
 
 
           <div className="lg:hidden md:max-w-[400px]  mt-5 md:mt-0">
-            <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 0.9, ease:'easeOut'}} src={image} alt="" className="object-cover" />
+            <motion.img initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.9, ease: 'easeOut' }} src={image} alt="" className="object-cover" />
           </div>
         </Link>
 
-        {isHover &&
+        {hoveredProject &&
           <motion.div
             style={{ translateX: imageX, translateY: imageY }}
             className="w-[300px] h-[200px] fixed inset-0 pointer-events-none overflow-hidden border border-white/70"

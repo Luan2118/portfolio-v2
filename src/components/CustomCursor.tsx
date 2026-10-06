@@ -9,7 +9,7 @@ function CustomCursor() {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
-  const { isHover } = useCursor();
+  const { isHover, hoveredProject } = useCursor();
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
@@ -32,7 +32,7 @@ function CustomCursor() {
         translateY: cursorY,
       }}
       animate={{
-        scale: isHover ? 4 : 1
+        scale: isHover || hoveredProject ? 4 : 1
       }}
       transition={{ duration: 0.3, ease: "easeOut" }}
       className={`${hasFinePointer ? `fixed top-0 left-0 w-3 h-3 rounded-2xl mix-blend-difference bg-white pointer-events-none ` : null}`}>

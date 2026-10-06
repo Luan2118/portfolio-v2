@@ -8,7 +8,6 @@ import { useState } from "react";
 
 
 function Projects() {
-  const { setIsHover } = useCursor();
 
   const [activeImage, setActiveImage] = useState<string>('');
 
@@ -47,7 +46,6 @@ function Projects() {
 
       <div className="flex flex-col " >
         <ul
-          onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
 
         >
           <ProjectCard name="Gym Tracker" description="A React and TypeScript workout tracker for training splits, active workout logging, body weight tracking, and progress review." category="Full-Stack Development" image={gymDashboard} updateActiveImage={updateActiveImage} activeImage={activeImage} link='/gym-tracker'/>
