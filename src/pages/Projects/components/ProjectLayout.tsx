@@ -84,6 +84,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
             src={isDark ? whiteArrow : blackArrow}
             alt=""
             onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
+            className={`${isDark ?' bg-[#171512]': null}`}
           />
         </Link>
 

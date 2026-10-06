@@ -15,6 +15,7 @@ function CustomCursor() {
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX - 6)
       cursorY.set(e.clientY - 6)
+
     }
     window.addEventListener('mousemove', moveCursor)
     return () => {
