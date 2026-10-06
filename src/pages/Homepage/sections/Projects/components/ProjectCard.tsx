@@ -50,7 +50,7 @@ function ProjectCard({ name, description, category, image, activeImage, updateAc
       >
         <Link
           to={link}
-          className="overflow-hidden flex flex-row flex-wrap justify-between  lg:pl-40  group-hover:opacity-50 duration-400  lg:flex-row  lg:items-center"
+          className="overflow-hidden flex flex-row flex-wrap justify-between md:mix-blend-difference  lg:pl-40  group-hover:opacity-50 duration-400  lg:flex-row  lg:items-center"
         >
 
           <div className="flex flex-col  gap-4 lg:justify-between  md:max-w-[300px]">
