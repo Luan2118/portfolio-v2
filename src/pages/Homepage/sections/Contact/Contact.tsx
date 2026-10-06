@@ -54,20 +54,29 @@ function Contact() {
 
   return (
     <>
-      <div id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col px-5 pt-5 gap-3 justify-between md:px-15 xl:px-40 2xl:px-65 text-[#171512]">
+      <div id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col px-5  pt-13 gap-10 justify-between xl:px-40 2xl:px-65 text-[#171512]">
 
-        <div className="overflow-hidden  my-auto">
-          <motion.p
+        <div className="overflow-hidden my-auto font-[Judson] flex justify-center gap-5  flex-wrap leading-[0.8] py-15 xs:px-10 xsm:px-15 sm:px-0 sm:flex-nowrap">
+          <motion.span
             initial={{ opacity: 0, y: '100%' }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-[clamp(50px,calc(20px+10vw),60px)] md:text-[clamp(100px,10vw,128px)] leading-none font-[Judson] text-center ">
-            Get in Touch
-          </motion.p >
+            className="text-[clamp(100px,18vw,180px)] text-left w-full sm:text-center sm:w-fit"
+          >Get in
+          </motion.span>
+
+          <motion.span
+            initial={{ opacity: 0, y: '100%' }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-[clamp(100px,18vw,180px)] text-right w-full sm:text-center sm:w-fit"
+          >
+            Touch
+          </motion.span>
         </div>
 
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 my-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-auto">
 
           <div className="order-1 lg:order-2">
             <form className="flex flex-col justify-between" onSubmit={(e) => handleSubmit(e)}>
@@ -84,7 +93,7 @@ function Contact() {
                 transition={{ duration: 1.8, ease: "easeOut" }}
                 className="self-end text-sm md:text-base lg:text-lg font-[Inter] mt-1 sm:mt-3 px-3 border-[#292725] rounded-sm cursor-pointer xs:px-5 md:px-6 "
                 onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
-                >Submit
+              >Submit
               </motion.button>
             </form>
 
@@ -104,8 +113,8 @@ function Contact() {
             )}
           </div>
 
-          <div className="order-2 lg:order-1 flex flex-col gap-3 xs:gap-10 lg:gap-0 md:justify-between  md:mt-0">
-            <div className="flex flex-col gap-2 xs:gap-4 md:gap-5 mt-2">
+          <div className="order-2 lg:order-1 flex flex-col gap-10 xs:gap-10 lg:gap-0 md:justify-between  md:mt-0">
+            <div className="flex flex-col gap-4 xs:gap-6 md:gap-8 mt-2">
               <ContactLink src={github} text="Github" path='https://github.com/Luan2118' />
 
               <ContactLink src={linkedin} text="LinkedIn" path='https://www.linkedin.com/in/luan-le-7671b9342/' />
@@ -120,7 +129,7 @@ function Contact() {
                   initial={{ opacity: 0, y: '100%' }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, ease: "easeOut" }}
-                  className=" text-lg sm:text-2xl 2xl:text-3xl font-[Judson]  pr-5"
+                  className=" text-lg sm:text-2xl 2xl:text-3xl font-[Judson] pr-5"
                   href="mailto:leluanvn21@seznam.cz"
                 >
                   leluanvn21@seznam.cz

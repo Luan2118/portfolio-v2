@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 function Footer() {
   return (
-    <div className="overflow-hidden bg-[#FFFBF4] ">
+    <div className="overflow-hidden bg-[#FFFBF4] mt-4 ">
       <motion.footer
         initial={{ opacity: 0, y: "100%"}}
         whileInView={{ opacity: 1, y: 0 }}

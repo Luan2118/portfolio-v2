@@ -23,7 +23,7 @@ function FormField({ id, label, placeholder, name, type }: FormFieldProps) {
       >
       <label htmlFor={id} className="mt-1">{label}</label>
       {id === 'message' ?
-        <textarea name={id} id={id} placeholder={placeholder} className="h-[50px] md:h-[100px] border-0 outline-0"></textarea> :
+        <textarea name={id} id={id} placeholder={placeholder} className="h-[80px] md:h-[100px] border-0 outline-0"></textarea> :
 
         <input name={name} id={id} type={type} placeholder={placeholder} className="border-0 outline-0" />
       }
