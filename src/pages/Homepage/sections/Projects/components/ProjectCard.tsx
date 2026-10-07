@@ -41,9 +41,9 @@ function ProjectCard({ name, description, category, image, activeImage, updateAc
     <>
       <motion.li
         className={`border border-l-0 border-r-0  py-10 group  border-white/40 ${name === 'Gym Tracker' ? null : 'border-t-0'}
-        [--entry-x:'0']
+        [--entry-x:0]
 
-        md:[--entry-x:'30%']
+        md:[--entry-x:30%]
         `}
         initial={{ x: 'var(--entry-x)', opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
