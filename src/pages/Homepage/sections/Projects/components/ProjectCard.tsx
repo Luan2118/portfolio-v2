@@ -16,7 +16,6 @@ type ProjectCardProps = {
 
 function ProjectCard({ name, description, category, image, activeImage, updateActiveImage, link }: ProjectCardProps) {
 
-  const { isHover } = useCursor();
 
   const imageX = useMotionValue(0);
   const imageY = useMotionValue(0);
@@ -36,6 +35,7 @@ function ProjectCard({ name, description, category, image, activeImage, updateAc
 
   const { hoveredProject, setHoveredProject } = useCursor();
 
+  const hasFinePointer = window.matchMedia("(pointer: fine)").matches
 
   return (
     <>
@@ -114,7 +114,7 @@ function ProjectCard({ name, description, category, image, activeImage, updateAc
         {hoveredProject &&
           <motion.div
             style={{ translateX: imageX, translateY: imageY }}
-            className="w-[300px] h-[200px] fixed inset-0 pointer-events-none overflow-hidden border border-white/70"
+            className={`${hasFinePointer ? 'w-[300px] h-[200px] fixed inset-0 pointer-events-none overflow-hidden border border-white/70}' : null}`}
           >
             <AnimatePresence >
               <motion.img
@@ -132,7 +132,7 @@ function ProjectCard({ name, description, category, image, activeImage, updateAc
 
           </motion.div>}
 
-      </motion.li>
+      </motion.li >
 
 
     </>

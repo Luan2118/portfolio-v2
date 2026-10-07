@@ -3,7 +3,6 @@ import { motion } from "motion/react";
 import gymDashboard from "../../../../assets/images/gym-tracker/dashboard.png";
 import financeDashBoard from "../../../../assets/images/finance-tracker/dashboard.png";
 import hospoda from "../../../../assets/images/hospoda-pod-bousovem/front-view.png";
-import useCursor from "../../../../hooks/useCursor";
 import { useState } from "react";
 
 
