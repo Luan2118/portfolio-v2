@@ -78,7 +78,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
       <div className={`contents xl:flex xl:flex-col ${isDark ? 'bg-[#171512]' : 'bg-[#FFFBF4]'}`}>
 
-        <Link to='/' className="mb-8 2xl:mb-15 w-10 xl:w-12 mt-4 xl:ml-4 w-[clamp(20px,3vw,30px)] h-[clamp(20px,3vw,30px)]">
+        <Link to='/' className="mb-8 2xl:mb-15 w-10 xl:w-12 mt-4 xl:ml-4 w-[clamp(25px,4vw,30px)] h-[clamp(25px,4vw,30px)]">
           <motion.img
             variants={buttonVariant}
             src={isDark ? whiteArrow : blackArrow}
