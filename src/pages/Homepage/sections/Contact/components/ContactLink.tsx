@@ -15,6 +15,7 @@ function ContactLink({ text, src, path }: ContactLinkProps) {
     <motion.a
       initial={{ opacity: 0, x: -40 }}
       whileInView={{ opacity: 1, x: 0 }}
+      viewport={{once: true}}
       transition={{ duration: 1, ease: "easeOut" }}
       href={path}
       target='_blank'

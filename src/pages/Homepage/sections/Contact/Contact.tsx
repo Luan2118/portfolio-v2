@@ -60,6 +60,7 @@ function Contact() {
           <motion.span
             initial={{ opacity: 0, y: '100%' }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{once: true}}
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-[clamp(70px,15vw,120px)] text-left w-full sm:text-center sm:w-fit no-wrap tracking-tight leading-[1]"
           >Let's Work
@@ -68,6 +69,7 @@ function Contact() {
           <motion.span
             initial={{ opacity: 0, y: '100%' }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{once: true}}
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-[clamp(70px,15vw,120px)] text-right w-full sm:text-center sm:w-fit"
           >
@@ -90,6 +92,7 @@ function Contact() {
               <motion.button
                 initial={{ opacity: 0, x: 60 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                viewport={{once: true}}
                 transition={{ duration: 1.8, ease: "easeOut" }}
                 className="self-end text-sm md:text-base lg:text-lg font-[Inter] mt-1 sm:mt-3 px-3 border-[#292725] rounded-sm cursor-pointer xs:px-5 md:px-6 "
                 onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
@@ -128,6 +131,7 @@ function Contact() {
                 <motion.a
                   initial={{ opacity: 0, y: '100%' }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{once: true}}
                   transition={{ duration: 1, ease: "easeOut" }}
                   className=" text-lg sm:text-2xl 2xl:text-3xl font-[Judson] pr-5"
                   href="mailto:leluanvn21@seznam.cz"
