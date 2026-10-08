@@ -1,41 +1,21 @@
 import projectsArrow from "../../../../../assets/icons/projectsArrow.png";
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion, useMotionValue } from "motion/react";
+import {  motion } from "motion/react";
 import useCursor from "../../../../../hooks/useCursor";
-import { useEffect } from "react";
 
 type ProjectCardProps = {
   name: string
   description: string
   category: string
   image: string
-  activeImage: string
   updateActiveImage: (image: string) => void
   link: '/gym-tracker' | '/finance-tracker' | '/hospudka-pod-bousovem'
 }
 
-function ProjectCard({ name, description, category, image, activeImage, updateActiveImage, link }: ProjectCardProps) {
+function ProjectCard({ name, description, category, image, updateActiveImage, link }: ProjectCardProps) {
 
+  const { setHoveredProject } = useCursor();
 
-  const imageX = useMotionValue(0);
-  const imageY = useMotionValue(0);
-
-  useEffect(() => {
-    const moveImage = (e: MouseEvent) => {
-      imageX.set(e.clientX + 15)
-      imageY.set(e.clientY + 10)
-    }
-
-    window.addEventListener('mousemove', moveImage)
-
-    return () => {
-      window.removeEventListener('mousemove', moveImage)
-    }
-  }, [])
-
-  const { hoveredProject, setHoveredProject } = useCursor();
-
-  const hasFinePointer = window.matchMedia("(pointer: fine)").matches
 
   return (
     <>
@@ -111,26 +91,7 @@ function ProjectCard({ name, description, category, image, activeImage, updateAc
           </div>
         </Link>
 
-        {hoveredProject &&
-          <motion.div
-            style={{ translateX: imageX, translateY: imageY }}
-            className={`${hasFinePointer ? 'w-[300px] h-[200px] fixed inset-0 pointer-events-none overflow-hidden border border-white/70}' : null}`}
-          >
-            <AnimatePresence >
-              <motion.img
-                initial={{ y: '100%' }}
-                animate={{ y: 0 }}
-                exit={{ y: '-100%' }}
-                transition={{ duration: 0.4, ease: 'easeOut' }}
-                key={activeImage}
-                src={activeImage} alt="" className="absolute top-0 left-0 " />
-            </AnimatePresence >
 
-            <div className="absolute bottom-0 left-0 right-0 px-4 py-3 bg-gradient-to-t from-black/80 to-transparent">
-              <p className="text-[#FFFBF4]/90">View Case</p>
-            </div>
-
-          </motion.div>}
 
       </motion.li >
 

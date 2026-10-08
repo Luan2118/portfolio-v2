@@ -4,6 +4,9 @@ import gymDashboard from "../../../../assets/images/gym-tracker/dashboard.png";
 import financeDashBoard from "../../../../assets/images/finance-tracker/dashboard.png";
 import hospoda from "../../../../assets/images/hospoda-pod-bousovem/front-view.png";
 import { useState } from "react";
+import { AnimatePresence, useMotionValue } from "motion/react";
+import useCursor from "../../../../hooks/useCursor";
+import { useEffect } from "react";
 
 
 function Projects() {
@@ -13,6 +16,28 @@ function Projects() {
   function updateActiveImage(image: string) {
     setActiveImage(image)
   }
+
+  const imageX = useMotionValue(0);
+  const imageY = useMotionValue(0);
+
+  useEffect(() => {
+    const moveImage = (e: MouseEvent) => {
+      imageX.set(e.clientX + 15)
+      imageY.set(e.clientY + 10)
+    }
+
+    window.addEventListener('mousemove', moveImage)
+
+    return () => {
+      window.removeEventListener('mousemove', moveImage)
+    }
+  }, [])
+
+
+  const { hoveredProject } = useCursor();
+
+  const hasFinePointer = window.matchMedia("(pointer: fine)").matches
+
 
   return (
     <div id="projects" className="bg-[#171512] text-[#FFFBF4] min-h-svh flex flex-col py-15 px-5 xl:px-15 2xl:px-60  gap-8">
@@ -30,7 +55,7 @@ function Projects() {
           Projects I've built
 
         </motion.p>
-        
+
         <motion.p
           initial={{ y: '100%', opacity: 0 }
           }
@@ -47,13 +72,33 @@ function Projects() {
         <ul
 
         >
-          <ProjectCard name="Gym Tracker" description="A React and TypeScript workout tracker for training splits, active workout logging, body weight tracking, and progress review." category="Full-Stack Development" image={gymDashboard} updateActiveImage={updateActiveImage} activeImage={activeImage} link='/gym-tracker'/>
+          <ProjectCard name="Gym Tracker" description="A React and TypeScript workout tracker for training splits, active workout logging, body weight tracking, and progress review." category="Full-Stack Development" image={gymDashboard} updateActiveImage={updateActiveImage}  link='/gym-tracker' />
 
-          <ProjectCard name="Finance Tracker" description="A full-stack finance tracker for income, expenses, protected user data, transaction filtering, charts, and currency conversion." category="Full-Stack Development" image={financeDashBoard} updateActiveImage={updateActiveImage} activeImage={activeImage} link='/finance-tracker' />
+          <ProjectCard name="Finance Tracker" description="A full-stack finance tracker for income, expenses, protected user data, transaction filtering, charts, and currency conversion." category="Full-Stack Development" image={financeDashBoard} updateActiveImage={updateActiveImage}  link='/finance-tracker' />
 
-          <ProjectCard name="Hospůdka pod Boušovem" description="Local business website for a village pub, focused on presenting the venue, menu and essential visitor information." category="Web Design & Development" image={hospoda} updateActiveImage={updateActiveImage} activeImage={activeImage} link='/hospudka-pod-bousovem' />
+          <ProjectCard name="Hospůdka pod Boušovem" description="Local business website for a village pub, focused on presenting the venue, menu and essential visitor information." category="Web Design & Development" image={hospoda} updateActiveImage={updateActiveImage} link='/hospudka-pod-bousovem' />
         </ul>
 
+        {hoveredProject &&
+          <motion.div
+            style={{ translateX: imageX, translateY: imageY }}
+            className={`${hasFinePointer ? 'w-[300px] h-[200px] fixed inset-0 pointer-events-none overflow-hidden border border-white/70}' : null}`}
+          >
+            <AnimatePresence >
+              <motion.img
+                initial={{ y: '100%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '-100%' }}
+                transition={{ duration: 0.4, ease: 'easeOut' }}
+                key={activeImage}
+                src={activeImage} alt="" className="absolute top-0 left-0 " />
+            </AnimatePresence >
+
+            <div className="absolute bottom-0 left-0 right-0 px-4 py-3 bg-gradient-to-t from-black/80 to-transparent">
+              <p className="text-[#FFFBF4]/90">View Case</p>
+            </div>
+
+          </motion.div>}
       </div>
     </div>
   )
