@@ -40,7 +40,7 @@ function Projects() {
 
 
   return (
-    <div id="projects" className="bg-[#171512] text-[#FFFBF4] min-h-svh flex flex-col px-5 xl:px-15 2xl:px-50 gap-4">
+    <div id="projects" className="bg-[#171512] text-[#FFFBF4] min-h-svh flex flex-col px-5 xl:px-15 2xl:px-50 gap-4 pb-20">
 
       <div
         className=" font-[Judson] overflow-hidden lg:px-30 text-[#FFFBF4]/80 ">

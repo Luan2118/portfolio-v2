@@ -1,3 +1,4 @@
+import About from "./sections/About/About";
 import Contact from "./sections/Contact/Contact";
 import Hero from "./sections/Hero";
 import Learning from "./sections/Learning/Learning";
@@ -10,10 +11,11 @@ function Homepage() {
       <Hero />
 
       <Learning />
-      
+
       <Projects />
 
-
+      <About />
+      
       <Contact />
     </div>
   )
