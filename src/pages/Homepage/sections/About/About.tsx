@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 function About() {
     return (
-        <section className="bg-[#171512] flex flex-col lg:flex-row py-20 lg:py-0 items-center  lg:h-[330px] gap-10  lg:gap-15 border border-r-0 border-l-0 border-white/40">
+        <section className="bg-[#171512] flex flex-col lg:flex-row py-20 lg:py-0 items-center  lg:h-[350px] gap-10  lg:gap-15 border border-r-0 border-l-0 border-white/40">
             <div className="flex flex-col items-center flex-[2]">
                 <div className="overflow-hidden ">
                     <motion.h2
