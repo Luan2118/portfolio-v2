@@ -40,31 +40,20 @@ function Projects() {
 
 
   return (
-    <div id="projects" className="bg-[#171512] text-[#FFFBF4] min-h-svh flex flex-col py-15 px-5 xl:px-15 2xl:px-60  gap-8">
+    <div id="projects" className="bg-[#171512] text-[#FFFBF4] min-h-svh flex flex-col px-5 xl:px-15 2xl:px-60 gap-4">
 
       <div
-
-        className="flex flex-col gap-2 font-[Judson] overflow-hidden">
-
+        className=" font-[Judson] overflow-hidden lg:px-40 text-[#FFFBF4]/80 ">
         <motion.p
-          initial={{ y: 30, opacity: 0 }
+          initial={{ y: "100%", opacity: 0 }
           }
           whileInView={{ y: 0, opacity: 1 }}
+          viewport={{once: true}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-[#FFFBF4]/70">
-          Projects I've built
-
-        </motion.p>
-
-        <motion.p
-          initial={{ y: '100%', opacity: 0 }
-          }
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-[clamp(20px,8vw,40px)]">
+          className="text-lg"
+          >
           Selected Work
         </motion.p>
-
       </div>
 
 
@@ -72,11 +61,11 @@ function Projects() {
         <ul
 
         >
-          <ProjectCard name="Gym Tracker" description="A React and TypeScript workout tracker for training splits, active workout logging, body weight tracking, and progress review." category="Full-Stack Development" image={gymDashboard} updateActiveImage={updateActiveImage}  link='/gym-tracker' />
+          <ProjectCard name="Gym Tracker" category="Full-Stack Development" image={gymDashboard} updateActiveImage={updateActiveImage} link='/gym-tracker' />
 
-          <ProjectCard name="Finance Tracker" description="A full-stack finance tracker for income, expenses, protected user data, transaction filtering, charts, and currency conversion." category="Full-Stack Development" image={financeDashBoard} updateActiveImage={updateActiveImage}  link='/finance-tracker' />
+          <ProjectCard name="Finance Tracker" category="Full-Stack Development" image={financeDashBoard} updateActiveImage={updateActiveImage} link='/finance-tracker' />
 
-          <ProjectCard name="Hospůdka pod Boušovem" description="Local business website for a village pub, focused on presenting the venue, menu and essential visitor information." category="Web Design & Development" image={hospoda} updateActiveImage={updateActiveImage} link='/hospudka-pod-bousovem' />
+          <ProjectCard name="Hospůdka pod Boušovem" category="Web Design & Development" image={hospoda} updateActiveImage={updateActiveImage} link='/hospudka-pod-bousovem' />
         </ul>
 
         {hoveredProject &&

@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 function Hero() {
 
   const revealAnimation = {
-    initial: { opacity: 0, y: '100%' },
+    initial: { opacity: 0, y: '-100%' },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.8 }
   }
@@ -54,16 +54,40 @@ function Hero() {
           <span>Luan</span>
           <span className="text-right">Le</span>
         </motion.h1>
+
+
       </div>
 
-      <div className="overflow-hidden">
-        <motion.aside
+      <div className="flex flex-col justify-center items-center gap-4 overflow-hidden">
+        <motion.span
           {...revealAnimation}
-          className="text-sm flex justify-between sm:text-lg font-[Inter]"
-        >
-          <p>Learning by building</p>
-          <p>(SCROLL)</p>
-        </motion.aside>
+          className="text-xs uppercase tracking-[0.15em] font-[Inter]">
+          Explore my work
+        </motion.span>
+
+        <div className="overflow-hidden">
+          <motion.svg
+            initial={{ opacity: 0, y: "-60%" }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.7,
+              ease: "easeOut",
+            }}
+            width="16"
+            height="35"
+            viewBox="0 0 16 65"
+            fill="none"
+            className="transition-transform duration-300 group-hover:translate-y-2"
+          >
+            <path
+              d="M8 0V63M3 58L8 63L13 58"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </motion.svg>
+        </div>
       </div>
     </div >
   )
