@@ -54,24 +54,24 @@ function Contact() {
 
   return (
     <>
-      <div id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col px-5  pt-13 gap-10 justify-between xl:px-40 2xl:px-65 text-[#171512]">
+      <div id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col px-5  pt-13 gap-20 justify-between lg:px-20 xl:px-40  text-[#171512]">
 
-        <div className="overflow-hidden my-auto font-[Judson] flex justify-center gap-5  flex-wrap leading-[0.8] py-15 xs:px-10 xsm:px-15 sm:px-0 sm:flex-nowrap">
+        <div className="overflow-hidden my-auto font-[Judson] flex flex-col items-center justify-center gap-2 lg:gap-5  flex-wrap leading-[0.8] py-15 xs:px-8 xsm:px-15 sm:px-0 sm:flex-nowrap">
           <motion.span
             initial={{ opacity: 0, y: '100%' }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-[clamp(100px,18vw,180px)] text-left w-full sm:text-center sm:w-fit"
-          >Get in
+            className="text-[clamp(70px,15vw,120px)] text-left w-full sm:text-center sm:w-fit no-wrap tracking-tight leading-[1]"
+          >Let's Work
           </motion.span>
 
           <motion.span
             initial={{ opacity: 0, y: '100%' }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-[clamp(100px,18vw,180px)] text-right w-full sm:text-center sm:w-fit"
+            className="text-[clamp(70px,15vw,120px)] text-right w-full sm:text-center sm:w-fit"
           >
-            Touch
+            Together
           </motion.span>
         </div>
 
