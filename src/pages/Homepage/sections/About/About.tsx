@@ -2,37 +2,24 @@ import { motion } from "motion/react";
 
 function About() {
     return (
-        <section className="bg-[#171512] text-[#FFFBF4] flex items-center  h-[500px] px-15 gap-15 border border-r-0 border-l-0 border-white/40">
-            <div className="flex flex-col items-center flex-[2] py-30">
+        <section className="bg-[#171512] flex flex-col lg:flex-row py-20 lg:py-0 items-center  lg:h-[330px] gap-10  lg:gap-15 border border-r-0 border-l-0 border-white/40">
+            <div className="flex flex-col items-center flex-[2]">
                 <div className="overflow-hidden ">
                     <motion.h2
                         initial={{ y: "100%", opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="text-[clamp(50px,15vw,100px)] font-[Judson] leading-none w-fit   ">
+                        className="text-[clamp(50px,15vw,100px)] font-[Judson] leading-none w-fit  text-[#FFFBF4]/90 ">
                         About me
                     </motion.h2>
                 </div>
 
-                <div className="overflow-hidden">
-
-                    <motion.p
-                        initial={{ y: "100%", opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-
-                        className="text-[#FFFBF4]/70 max-w-[300px] w-fit">
-                        How I learned, what I focus on, and how I approach frontend development.
-                    </motion.p>
-                </div>
-
             </div>
 
-            <div className="w-px self-stretch bg-white/40" />
+            <div className="w-px self-stretch bg-white/40"/>
 
-            <div className="font-[Inter] flex-[1] py-30">
+            <div className="font-[Inter] flex-[1] px-4 text-[#FFFBF4]/80">
 
                 <div className="overflow-hidden">
                     <motion.span

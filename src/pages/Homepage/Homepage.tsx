@@ -10,12 +10,11 @@ function Homepage() {
     <div className="overflow-x-clip">
       <Hero />
 
-      <Learning />
-
       <Projects />
+      <Learning />  
 
       <About />
-      
+
       <Contact />
     </div>
   )

@@ -38,24 +38,10 @@ const textItem: Variants = {
   },
 }
 
-const lineItem: Variants = {
-  hidden: {
-    opacity: 0,
-    scaleX: 0,
-  },
-  visible: {
-    opacity: 0.6,
-    scaleX: 1,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-}
-
 function Learning() {
   return (
     <motion.section
+    
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -63,21 +49,18 @@ function Learning() {
         once: true,
         amount: 0.4,
       }}
-      className="bg-[#171512] text-[#FFFBF4] font-[Inter] flex flex-col md:flex-row items-center justify-between gap-8 px-5 py-40 md:px-20 lg:px-40 2xl:px-90 ">
+      className=" bg-[#171512] text-[#FFFBF4] font-[Inter] flex flex-col gap-4 items-center  px-5 pb-20 ">
 
       <motion.p
         variants={textItem}
-        className="text-4xl font-[Judson] leading-none w-fit min-w-[200px]">
+        className="text-lg uppercase tracking-[0.15em] font-[Inter]  text-[#FFFBF4]/90 text-center">
         Learning by building
       </motion.p>
 
-      <motion.hr
-        variants={lineItem}
-        className="w-full max-w-[300px] border-[#FFFBF4] origin-left " />
 
       <motion.p
         variants={container}
-        className="max-w-[360px] md:px-10 text-[#FFFBF4]/70 leading-relaxed"
+        className="max-w-[700px] md:px-10 text-[#FFFBF4]/70 text-base text-center"
       >
         <motion.span variants={word}>I believe the best way to learn is to create. </motion.span>
         <motion.span variants={word}>Every project is an opportunity to explore new ideas, </motion.span>

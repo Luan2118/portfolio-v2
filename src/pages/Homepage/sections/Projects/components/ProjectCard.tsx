@@ -26,12 +26,15 @@ function ProjectCard({ name, category, image, updateActiveImage, link }: Project
         `}
         initial={{ x: 'var(--entry-x)', opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        viewport={{once: true}}
+        viewport={{ once: true }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        onMouseEnter={() => {
+        onHoverStart={() => {
           setHoveredProject(name)
           updateActiveImage(image)
-        }} onMouseLeave={() => setHoveredProject(null)}
+        }}
+        onHoverEnd={() => setHoveredProject(null)}
+        
+        onClick={() => setHoveredProject(null)}
 
       >
         <Link
