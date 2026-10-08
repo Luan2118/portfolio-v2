@@ -63,7 +63,7 @@ function Learning() {
         once: true,
         amount: 0.4,
       }}
-      className="bg-[#171512] text-[#FFFBF4] font-[Inter] flex flex-col md:flex-row items-center justify-between gap-8 px-5 py-40 md:px-20 lg:px-40 2xl:px-100 ">
+      className="bg-[#171512] text-[#FFFBF4] font-[Inter] flex flex-col md:flex-row items-center justify-between gap-8 px-5 py-40 md:px-20 lg:px-40 2xl:px-90 ">
 
       <motion.p
         variants={textItem}
