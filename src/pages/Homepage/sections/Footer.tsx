@@ -1,15 +1,11 @@
-import { motion } from "motion/react";
 
 function Footer() {
   return (
-    <div className="overflow-hidden bg-[#FFFBF4] mt-4 ">
-      <motion.footer
-        initial={{ opacity: 0, y: "100%"}}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+    <div className="overflow-hidden bg-[#FFFBF4] mt-4 border border-l-0 border-r-0 border-b-0 ">
+      <footer
         className="text-center font-[Judson] bg-[#FFFBF4] pb-1 text-sm sm:text-base">
         (© 2026 Luan Le)
-      </motion.footer>
+      </footer>
     </div>
 
   )
