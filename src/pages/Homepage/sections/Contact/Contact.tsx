@@ -62,7 +62,7 @@ function Contact() {
           <motion.span
             initial={{ opacity: 0, y: '100%' }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{once: true}}
+            viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-[clamp(70px,15vw,120px)] text-left w-full sm:text-center sm:w-fit no-wrap tracking-tight leading-[1]"
           >Let's Work
@@ -71,7 +71,7 @@ function Contact() {
           <motion.span
             initial={{ opacity: 0, y: '100%' }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{once: true}}
+            viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-[clamp(70px,15vw,120px)] text-right w-full sm:text-center sm:w-fit"
           >
@@ -91,15 +91,18 @@ function Contact() {
 
               <FormField name="message" id="message" label="Your message" placeholder="Tell me about the opportunity..." />
 
-              <motion.button
-                initial={{ opacity: 0, x: 60 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{once: true}}
-                transition={{ duration: 1.8, ease: "easeOut" }}
-                className="self-end text-sm md:text-base lg:text-lg font-[Inter] mt-1 sm:mt-3 px-3 border-[#292725] rounded-sm cursor-pointer xs:px-5 md:px-6 "
-                onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
-              >Submit
-              </motion.button>
+              <div className="flex flex-col group w-fit self-end">
+                <motion.button
+                  initial={{ opacity: 0, x: 60 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.8, ease: "easeOut" }}
+                  className=" text-sm md:text-base lg:text-lg font-[Inter] mt-1 sm:mt-2 mr-3 ml-1"
+                  onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
+                >Submit
+                </motion.button>
+                <hr className="scale-x-0 origin-left group-hover:scale-x-100 h-px transition-transform duration-400 border-0 bg-white mix-blend-difference"/>
+              </div>
             </form>
 
             {status === "success" && (
@@ -119,7 +122,7 @@ function Contact() {
           </div>
 
           <div className="order-2 lg:order-1 flex flex-col gap-10 xs:gap-10 lg:gap-0 md:justify-between  md:mt-0">
-            <div className="flex flex-col gap-4 xs:gap-6 md:gap-8 mt-2">
+            <div className="flex flex-col gap-2 xs:gap-4 md:gap-6 mt-2">
               <ContactLink src={github} text="Github" path='https://github.com/Luan2118' />
 
               <ContactLink src={linkedin} text="LinkedIn" path='https://www.linkedin.com/in/luan-le-7671b9342/' />
@@ -133,7 +136,7 @@ function Contact() {
                 <motion.a
                   initial={{ opacity: 0, y: '100%' }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{once: true}}
+                  viewport={{ once: true }}
                   transition={{ duration: 1, ease: "easeOut" }}
                   className=" text-lg sm:text-2xl 2xl:text-3xl font-[Judson] pr-5"
                   href="mailto:leluanvn21@seznam.cz"
