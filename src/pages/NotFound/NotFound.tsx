@@ -23,6 +23,7 @@ function NotFound() {
         to="/"
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
+        onClick={(() => setIsHover(false))}
         className="mt-10 font-[Inter] text-sm border border-[#292725] text-[#292725] bg-[#FFFBF4] py-1 px-3 xs:px-6 xs:text-sm 2xl:text-base rounded-sm"
       >
         Back to home ↗
