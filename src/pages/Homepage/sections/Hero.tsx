@@ -10,9 +10,9 @@ function Hero() {
   }
 
   return (
-    <div id="hero" className="min-h-svh bg-[#FFFBF4] flex flex-col justify-between p-8 font-[Inter] ">
+    <section id="hero" className="min-h-svh bg-[#FFFBF4] flex flex-col justify-between p-8 font-[Inter] ">
 
-      <aside
+      <nav
         className="fixed top-8 left-8 right-8 l grid grid-cols-2 items-center sm:grid-cols-3 text-[#D4D4D4] mix-blend-difference antialiased ">
 
         <div className="overflow-hidden">
@@ -42,7 +42,7 @@ function Hero() {
           </motion.nav>
         </div>
 
-      </aside>
+      </nav>
 
       <div className="overflow-hidden m-auto">
         <motion.h1
@@ -89,7 +89,7 @@ function Hero() {
           </motion.svg>
         </div>
       </div>
-    </div >
+    </section >
   )
 }
 

@@ -40,11 +40,11 @@ function Projects() {
 
 
   return (
-    <div id="projects" className="bg-[#171512] text-[#FFFBF4] min-h-svh flex flex-col px-5 xl:px-15 2xl:px-50 gap-4 pt-30 pb-20">
+    <section id="projects" className="bg-[#171512] text-[#FFFBF4] min-h-svh flex flex-col px-5 xl:px-15 2xl:px-50 gap-4 pt-30 pb-20">
 
       <div
         className=" font-[Judson] overflow-hidden lg:px-30 text-[#FFFBF4]/70 ">
-        <motion.p
+        <motion.h2
           initial={{ y: "100%", opacity: 0 }
           }
           whileInView={{ y: 0, opacity: 1 }}
@@ -53,7 +53,7 @@ function Projects() {
           className="text-2xl"
           >
           Selected Work
-        </motion.p>
+        </motion.h2>
       </div>
 
 
@@ -90,7 +90,7 @@ function Projects() {
 
           </motion.div>}
       </div>
-    </div>
+    </section>
   )
 }
 

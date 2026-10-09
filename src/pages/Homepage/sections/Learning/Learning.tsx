@@ -51,11 +51,11 @@ function Learning() {
       }}
       className=" bg-[#171512] text-[#FFFBF4] font-[Inter] flex flex-col gap-4 items-center  px-5 pb-20 ">
 
-      <motion.p
+      <motion.h2
         variants={textItem}
         className="text-lg uppercase tracking-[0.15em] font-[Inter]  text-[#FFFBF4]/90 text-center">
         Learning by building
-      </motion.p>
+      </motion.h2>
 
 
       <motion.p

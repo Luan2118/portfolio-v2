@@ -53,7 +53,7 @@ function ProjectCard({ name, category, image, updateActiveImage, link }: Project
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <p className="text-[clamp(40px,10vw,55px)] leading-none font-[Judson] ">{name}</p>
+              <h3 className="text-[clamp(40px,10vw,55px)] leading-none font-[Judson] ">{name}</h3>
             </motion.div>
 
             <motion.div
