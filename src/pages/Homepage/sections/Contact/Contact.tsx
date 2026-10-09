@@ -113,7 +113,7 @@ function Contact() {
             )}
 
             {status === "error" && (
-              <div className="flex gap-2 items-center mt-2 text-sm text-red-500 font-[Inter]" role="error">
+              <div className="flex gap-2 items-center mt-2 text-sm text-red-500 font-[Inter]" role="alert">
                 <CircleX size={16} />
                 <span>Something went wrong.</span>
               </div>
