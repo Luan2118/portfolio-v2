@@ -213,35 +213,31 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
       <motion.div
         className="order-2 xl:overflow-y-scroll mt-15 xl:mt-0  [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
-        [--entry-x:0%]
-        [--entry-y:0%]
         [--entry-scale:1]
 
-        xl:[--entry-x:-130%]
-        xl:[--entry-y:0%]
-        xl:[--entry-scale:1]
+        xl:[--entry-scale:0.4]
         "
-        initial={{ x: "var(--entry-x)", y: "var(--entry-y)", scale: "var(--entry-scale)", opacity: 0 }}
-        animate={{ x: 0, y: 0, scale: 1, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        initial={{ scale: "var(--entry-scale)", opacity: 0 }}
+        animate={{scale:1, opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
 
       >
-        {images.map((image, index) => {
-          return (
-            <motion.img
-              initial={isXL ? index === 0 ? undefined : { opacity: 0 } : { opacity: 0 }}
-              animate={isXL ? index == 0 ? undefined : { opacity: 1 } : undefined}
-              whileInView={isXL ? undefined : { opacity: 1 }}
-              viewport={{ amount: 0.15 }}
-              transition={isXL ? { delay: 1, duration: 0.9, ease: "easeIn" } : { duration: 0.9, ease: "easeOut" }}
-              src={image}
-              alt=""
-              key={image}
-              loading={index === 0 ?  undefined: "lazy"}
-            />
-          )
-        })}
-      </motion.div>
+      {images.map((image, index) => {
+        return (
+          <motion.img
+            initial={isXL ? index === 0 ? undefined : { opacity: 0 } : { opacity: 0 }}
+            animate={isXL ? index == 0 ? undefined : { opacity: 1 } : undefined}
+            whileInView={isXL ? undefined : { opacity: 1 }}
+            viewport={{ amount: 0.15 }}
+            transition={isXL ? { delay: 1, duration: 0.9, ease: "easeIn" } : { duration: 0.9, ease: "easeOut" }}
+            src={image}
+            alt=""
+            key={image}
+            loading={index === 0 ? undefined : "lazy"}
+          />
+        )
+      })}
+    </motion.div>
 
     </motion.div >
   )
