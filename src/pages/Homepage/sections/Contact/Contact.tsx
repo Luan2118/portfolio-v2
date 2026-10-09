@@ -56,7 +56,7 @@ function Contact() {
     <>
       <div id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col px-5  pt-13 gap-20 justify-between lg:px-20 xl:px-40  text-[#171512]">
 
-        <div className="overflow-hidden my-auto font-[Judson] flex flex-col items-center justify-center gap-2 lg:gap-5  flex-wrap leading-[0.8] py-15 xs:px-8 xsm:px-15 sm:px-0 sm:flex-nowrap">
+        <div className="overflow-hidden my-auto font-[Judson] flex  items-center justify-center gap-2 lg:gap-5  flex-wrap leading-[0.8] py-15 xs:px-8 xsm:px-15 sm:px-0 ">
           <motion.span
             initial={{ opacity: 0, y: '100%' }}
             whileInView={{ opacity: 1, y: 0 }}
