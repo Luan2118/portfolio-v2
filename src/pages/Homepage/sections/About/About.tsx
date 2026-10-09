@@ -19,7 +19,7 @@ function About() {
 
             <div className="w-px self-stretch bg-white/40"/>
 
-            <div className="font-[Inter] flex-[1] px-4 text-[#FFFBF4]/80">
+            <div className="font-[Inter] flex-[1] px-4 text-[#FFFBF4]/80 flex flex-col gap-1">
 
                 <div className="overflow-hidden">
                     <motion.span
