@@ -42,6 +42,8 @@ function Contact() {
       if (response.ok) {
         setStatus("success");
         form.reset();
+      } else {
+        setStatus("error")
       }
 
     } catch (error) {
