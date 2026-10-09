@@ -85,7 +85,7 @@ function Contact() {
 
               <FormField name="name" id="name" type="text" label="Your name" placeholder="John Doe" />
 
-              <FormField name="name" id="email" type="email" label="Your email" placeholder="johndoe@example.com" />
+              <FormField name="email" id="email" type="email" label="Your email" placeholder="johndoe@example.com" />
 
               <FormField name="message" id="message" label="Your message" placeholder="Tell me about the opportunity..." />
 
