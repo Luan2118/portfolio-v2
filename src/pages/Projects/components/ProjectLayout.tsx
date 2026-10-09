@@ -49,6 +49,10 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
   const isDark = theme === 'dark';
 
+  const detailBorder = isDark
+    ? "border-white/20"
+    : "border-black/20"
+
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   function getWindowDimensions() {
@@ -78,15 +82,15 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
       <div className={`contents xl:flex xl:flex-col ${isDark ? 'bg-[#171512]' : 'bg-[#FFFBF4]'}`}>
 
-        <Link to='/' 
-        aria-label="Back to Homepage"
-        className="mb-8 2xl:mb-15 w-10 xl:w-12 mt-4 xl:ml-4 w-[clamp(25px,4vw,30px)] h-[clamp(25px,4vw,30px)]">
+        <Link to='/'
+          aria-label="Back to Homepage"
+          className="mb-8 2xl:mb-15 w-10 xl:w-14 mt-5 xl:ml-5 ">
           <motion.img
             variants={buttonVariant}
             src={isDark ? whiteArrow : blackArrow}
             alt=""
             onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
-            className={`${isDark ?' bg-[#171512]': null}`}
+            className={`${isDark ? ' bg-[#171512]' : null}`}
           />
         </Link>
 
@@ -131,12 +135,12 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
                 <motion.p variants={item} className="text-xl lg:text-xl font-[Judson] py-4">Details</motion.p>
 
                 <dl className="text-sm w-fit">
-                  <motion.div variants={item} className="grid grid-cols-[80px_1fr] gap-4 border-b border-black/20 pb-2">
+                  <motion.div variants={item} className={`grid grid-cols-[80px_1fr] gap-4 border-b pb-2 ${detailBorder}`}>
                     <dt className="font-medium uppercase tracking-wide">Type</dt>
                     <dd>{type}</dd>
                   </motion.div>
 
-                  <motion.div variants={item} className="grid grid-cols-[80px_1fr] gap-4 border-b border-black/20 py-2">
+                  <motion.div variants={item} className={`grid grid-cols-[80px_1fr] gap-4 border-b py-2 ${detailBorder}`}>
                     <dt className="font-medium uppercase tracking-wide">Features</dt>
                     <dd>{features}</dd>
                   </motion.div>
@@ -222,7 +226,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
         transition={{ duration: 1, ease: "easeOut" }}
 
       >
-        {images?.map((image, index) => {
+        {images.map((image, index) => {
           return (
             <motion.img
               initial={isXL ? index === 0 ? undefined : { opacity: 0 } : { opacity: 0 }}
