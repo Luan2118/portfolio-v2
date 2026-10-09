@@ -11,7 +11,7 @@ function PageTransition({ theme, children, page }: PageTransitionProps) {
   const transitionColor =
     theme === "dark"
       ? "bg-[#211E1A]"
-      : "bg-[#FAF8F4]"
+      : "bg-[#F1EADF]"
 
 
   useLayoutEffect(() => {
@@ -23,25 +23,23 @@ function PageTransition({ theme, children, page }: PageTransitionProps) {
     <>
       {children}
 
-      {page ?
-
-        <motion.div
-          className={`fixed inset-0 origin-left ${transitionColor}`}
-          initial={{ scaleX: 1 }}
-          animate={{ scaleX: 0 }}
-          exit={{ scaleX: 0 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        >
-        </motion.div>
-
-        : null}
 
       <motion.div
-        className={`fixed inset-0 origin-left ${transitionColor}`}
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 0 }}
-        exit={{ scaleX: 1 }}
+        className={`fixed inset-0 origin-top z-[9999] ${transitionColor}`}
+        initial={{ scaleY: 1 }}
+        animate={{ scaleY: 0 }}
+        exit={{ scaleY: 0 }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+      >
+      </motion.div>
+
+
+      <motion.div
+        className={`fixed inset-0 origin-bottom z-[9999] ${transitionColor}`}
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 0 }}
+        exit={{ scaleY: 1 }}
+        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
       >
       </motion.div>
     </>
