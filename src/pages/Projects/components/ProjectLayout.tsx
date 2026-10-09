@@ -237,6 +237,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
               src={image}
               alt=""
               key={image}
+              loading={index === 0 ? "lazy" : undefined}
             />
           )
         })}
