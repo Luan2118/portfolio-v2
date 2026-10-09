@@ -21,7 +21,7 @@ function App() {
       <CustomCursor />
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
-          <Route path='/' element={<PageTransition theme='light' page='homePage'><Homepage /></PageTransition>} />
+          <Route path='/' element={<PageTransition theme='light'><Homepage /></PageTransition>} />
           <Route path="/gym-tracker" element={<PageTransition theme='light'><GymTracker /></PageTransition>} />
           <Route path="/finance-tracker" element={<PageTransition theme='dark'><FinanceTracker /></PageTransition>} />
           <Route path="/hospudka-pod-bousovem" element={<PageTransition theme='light'><HospodaPodBousovem /></PageTransition>} />

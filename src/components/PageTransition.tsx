@@ -4,10 +4,10 @@ import { useLayoutEffect } from "react";
 type PageTransitionProps = {
   theme: 'dark' | 'light'
   children: React.ReactNode
-  page?: 'homePage'
+
 }
 
-function PageTransition({ theme, children, page }: PageTransitionProps) {
+function PageTransition({ theme, children}: PageTransitionProps) {
   const transitionColor =
     theme === "dark"
       ? "bg-[#211E1A]"
