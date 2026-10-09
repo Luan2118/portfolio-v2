@@ -96,6 +96,7 @@ function Contact() {
                   viewport={{ once: true }}
                   transition={{ duration: 1.8, ease: "easeOut" }}
                   className=" text-sm md:text-base lg:text-lg font-[Inter] mt-1 sm:mt-2 mr-3 ml-1"
+                  type="submit"
                   onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
                 >Submit
                 </motion.button>
@@ -104,7 +105,7 @@ function Contact() {
             </form>
 
             {status === "success" && (
-              <div className="flex gap-2 items-center mt-2 text-sm text-green-600 font-[Inter]">
+              <div className="flex gap-2 items-center mt-2 text-sm text-green-600 font-[Inter]" role="status">
                 <CircleCheck size={16} />
                 <span >Message sent successfully.</span>
               </div>
@@ -112,7 +113,7 @@ function Contact() {
             )}
 
             {status === "error" && (
-              <div className="flex gap-2 items-center mt-2 text-sm text-red-500 font-[Inter]">
+              <div className="flex gap-2 items-center mt-2 text-sm text-red-500 font-[Inter]" role="error">
                 <CircleX size={16} />
                 <span>Something went wrong.</span>
               </div>
