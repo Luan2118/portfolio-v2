@@ -19,7 +19,7 @@ function ProjectCard({ name, category, image, updateActiveImage, link }: Project
   return (
     <>
       <motion.li
-        className={`border border-l-0 border-r-0 pt-20 pb-10 lg:pb-20 group border-white/40 ${name === 'Gym Tracker' ? null : 'border-t-0'}
+        className={`border border-l-0 border-r-0 pt-10 pb-10 lg:pt-20 lg:pb-20 group border-white/40 ${name === 'Gym Tracker' ? null : 'border-t-0'}
         [--entry-x:0]
 
         md:[--entry-x:30%]
@@ -39,10 +39,10 @@ function ProjectCard({ name, category, image, updateActiveImage, link }: Project
       >
         <Link
           to={link}
-          className="overflow-hidden flex flex-row flex-wrap justify-between md:mix-blend-difference  lg:pl-30  group-hover:opacity-50 duration-400  lg:flex-row  lg:items-center"
+          className="overflow-hidden grid grid-cols-1 md:grid-cols-2 md:gap-x-8 md:items-start md:px-10 md:mix-blend-difference lg:flex lg:justify-between group-hover:opacity-50 duration-400 lg:items-center"
         >
 
-          <div className="flex flex-col  gap-4 lg:justify-between  md:max-w-[400px]">
+          <div className="flex min-w-0 flex-col gap-4 md:col-start-1 md:row-start-1 lg:justify-between lg:max-w-[400px]">
 
             <motion.div
               className="overflow-hidden
@@ -53,7 +53,7 @@ function ProjectCard({ name, category, image, updateActiveImage, link }: Project
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <h3 className="text-[clamp(40px,10vw,55px)] leading-none font-[Judson] ">{name}</h3>
+              <h3 className="text-[clamp(40px,10vw,55px)] md:text-[40px] lg:text-[55px] leading-none font-[Judson] ">{name}</h3>
             </motion.div>
 
             <motion.div
@@ -76,18 +76,18 @@ function ProjectCard({ name, category, image, updateActiveImage, link }: Project
 
 
 
-          <div className="flex w-full flex-col items-end lg:hidden md:w-auto md:max-w-[400px] mt-10 md:mt-0">
-            <motion.img initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.9, ease: 'easeOut' }} src={image} alt="" className="object-cover" />
-            <span className="mt-10 inline-flex min-h-11 items-center gap-3 rounded-sm border border-white/40 px-5 py-3 text-sm">
-              View Case
-              <img
-                src={projectsArrow}
-                alt=""
-                aria-hidden="true"
-                className="size-4 rotate-45"
-              />
-            </span>
+          <div className="mt-10 min-w-0 lg:hidden md:col-start-2 md:row-start-1 md:row-span-2 md:mt-0">
+            <motion.img initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.9, ease: 'easeOut' }} src={image} alt="" className="w-full object-cover" />
           </div>
+          <span className="mt-10 inline-flex min-h-11 items-center gap-3 justify-self-end rounded-sm border border-white/40 px-5 py-3 text-sm lg:hidden md:col-start-1 md:row-start-2 md:mt-0 md:self-end md:justify-self-start">
+            View Case
+            <img
+              src={projectsArrow}
+              alt=""
+              aria-hidden="true"
+              className="size-4 rotate-45"
+            />
+          </span>
         </Link>
 
 
