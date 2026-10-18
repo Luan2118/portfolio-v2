@@ -56,13 +56,13 @@ function Contact() {
   return (
       <section id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col px-5  pt-13 justify-between lg:px-20 xl:px-40  text-[#171512]">
 
-        <h2 className="overflow-hidden my-auto font-[Judson] flex  items-center justify-center gap-2 lg:gap-5  flex-wrap leading-[0.8] py-15 xs:px-8 xsm:px-15 sm:px-0 ">
+        <h2 className="overflow-hidden my-auto font-[Judson] flex  items-center justify-center gap-2 lg:gap-5  flex-wrap leading-[0.8] py-10 xs:px-8 xsm:px-15 sm:px-0 ">
           <motion.span
             initial={{ opacity: 0, y: '100%' }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-[clamp(70px,15vw,120px)] text-left w-full sm:text-center sm:w-fit no-wrap tracking-tight leading-[1]"
+            className="text-[clamp(70px,15vw,120px)] max-[340px]:text-[19vw] text-left w-full sm:text-center sm:w-fit whitespace-nowrap tracking-tight leading-[1]"
           >Let's Work
           </motion.span>
 
@@ -71,7 +71,7 @@ function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-[clamp(70px,15vw,120px)] text-right w-full sm:text-center sm:w-fit"
+            className="text-[clamp(70px,15vw,120px)] max-[340px]:text-[19vw] text-right w-full sm:text-center sm:w-fit whitespace-nowrap"
           >
             Together
           </motion.span>
