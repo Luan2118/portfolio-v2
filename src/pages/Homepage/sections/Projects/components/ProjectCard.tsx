@@ -19,7 +19,7 @@ function ProjectCard({ name, category, image, updateActiveImage, link }: Project
   return (
     <>
       <motion.li
-        className={`border border-l-0 border-r-0  py-20 group  border-white/40 ${name === 'Gym Tracker' ? null : 'border-t-0'}
+        className={`border border-l-0 border-r-0 pt-20 pb-10 lg:pb-20 group border-white/40 ${name === 'Gym Tracker' ? null : 'border-t-0'}
         [--entry-x:0]
 
         md:[--entry-x:30%]
@@ -76,8 +76,17 @@ function ProjectCard({ name, category, image, updateActiveImage, link }: Project
 
 
 
-          <div className="lg:hidden md:max-w-[400px]  mt-5 md:mt-0">
+          <div className="flex w-full flex-col items-end lg:hidden md:w-auto md:max-w-[400px] mt-10 md:mt-0">
             <motion.img initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.9, ease: 'easeOut' }} src={image} alt="" className="object-cover" />
+            <span className="mt-10 inline-flex min-h-11 items-center gap-3 rounded-sm border border-white/40 px-5 py-3 text-sm">
+              View Case
+              <img
+                src={projectsArrow}
+                alt=""
+                aria-hidden="true"
+                className="size-4 rotate-45"
+              />
+            </span>
           </div>
         </Link>
 
