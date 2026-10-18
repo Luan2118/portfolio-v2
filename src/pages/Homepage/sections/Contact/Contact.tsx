@@ -54,7 +54,7 @@ function Contact() {
   const { setIsHover } = useCursor();
 
   return (
-      <section id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col px-5  pt-13 gap-20 justify-between lg:px-20 xl:px-40  text-[#171512]">
+      <section id="contact" className="min-h-dvh bg-[#FFFBF4] flex flex-col px-5  pt-13 justify-between lg:px-20 xl:px-40  text-[#171512]">
 
         <h2 className="overflow-hidden my-auto font-[Judson] flex  items-center justify-center gap-2 lg:gap-5  flex-wrap leading-[0.8] py-15 xs:px-8 xsm:px-15 sm:px-0 ">
           <motion.span
