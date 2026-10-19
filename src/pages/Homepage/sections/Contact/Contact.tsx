@@ -78,7 +78,7 @@ function Contact() {
         </h2>
 
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-auto xl:px-10 2xl:px-20">
 
           <div className="order-1 lg:order-2">
             <form className="flex flex-col justify-between" onSubmit={(e) => handleSubmit(e)}>
