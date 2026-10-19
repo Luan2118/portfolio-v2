@@ -10,7 +10,7 @@ function Hero() {
   }
 
   return (
-    <section id="hero" className="min-h-svh bg-[#FFFBF4] flex flex-col justify-between p-8 font-[Inter] ">
+    <section id="hero" className="min-h-svh bg-[#FFFBF4] flex flex-col justify-between px-8 pt-8 pb-4 font-[Inter] ">
 
       <nav
         className="fixed top-8 left-8 right-8 l grid grid-cols-2 items-center sm:grid-cols-3 text-[#D4D4D4] mix-blend-difference antialiased ">
@@ -58,10 +58,10 @@ function Hero() {
 
       </div>
 
-      <div className="flex flex-col justify-center items-center gap-4 overflow-hidden">
+      <div className="flex flex-col justify-center items-center gap-2 overflow-hidden">
         <motion.span
           {...revealAnimation}
-          className="text-xs uppercase tracking-[0.15em] font-[Inter]">
+          className="text-xs uppercase tracking-[0.1em] font-[Inter]">
           Explore my work
         </motion.span>
 
