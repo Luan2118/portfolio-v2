@@ -85,7 +85,7 @@ function Projects() {
             </AnimatePresence >
 
             <div className="absolute bottom-0 left-0 right-0 px-4 py-3 bg-gradient-to-t from-black/80 to-transparent">
-              <p className="text-[#FFFBF4]/90">View Case</p>
+              <p className="text-[#FFFBF4]/90">View project</p>
             </div>
 
           </motion.div>}

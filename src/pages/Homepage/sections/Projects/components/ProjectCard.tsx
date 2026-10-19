@@ -79,8 +79,8 @@ function ProjectCard({ name, category, image, updateActiveImage, link }: Project
           <div className="mt-10 min-w-0 lg:hidden md:col-start-2 md:row-start-1 md:row-span-2 md:mt-0">
             <motion.img initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.9, ease: 'easeOut' }} src={image} alt="" className="w-full object-cover" />
           </div>
-          <span className="mt-10 inline-flex min-h-11 items-center gap-3 justify-self-end rounded-sm border border-white/40 px-5 py-3 text-sm lg:hidden md:col-start-1 md:row-start-2 md:mt-0 md:self-end md:justify-self-start">
-            View Case
+          <span className="mt-10 inline-flex items-center gap-3 justify-self-start rounded-sm border border-white/40 py-2 px-2 xs:px-5 md:px-6 text-xs xs:text-sm 2xl:text-base lg:hidden md:col-start-1 md:row-start-2 md:mt-0 md:self-end">
+            View project
             <img
               src={projectsArrow}
               alt=""
