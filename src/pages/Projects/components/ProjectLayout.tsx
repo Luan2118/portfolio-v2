@@ -233,6 +233,7 @@ function ProjectLayout({ title, titleSizeClassName = 'text-3xl md:text-4xl xl:te
             transition={isXL ? { delay: 1, duration: 0.9, ease: "easeIn" } : { duration: 0.9, ease: "easeOut" }}
             src={image}
             alt=""
+            className="h-auto w-full"
             key={image}
             loading={index === 0 ? undefined : "lazy"}
           />

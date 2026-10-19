@@ -2,7 +2,7 @@ import ProjectCard from "./components/ProjectCard";
 import { motion } from "motion/react";
 import gymDashboard from "../../../../assets/images/gym-tracker/dashboard.png";
 import financeDashBoard from "../../../../assets/images/finance-tracker/dashboard.png";
-import hospoda from "../../../../assets/images/hospoda-pod-bousovem/front-view.png";
+import hospoda from "../../../../assets/images/hospoda-pod-bousovem/hospudka-pod-bousovem-hero.png";
 import { useState } from "react";
 import { AnimatePresence, useMotionValue } from "motion/react";
 import useCursor from "../../../../hooks/useCursor";
@@ -81,7 +81,7 @@ function Projects() {
                 exit={{ y: '-100%' }}
                 transition={{ duration: 0.4, ease: 'easeOut' }}
                 key={activeImage}
-                src={activeImage} alt="" className="absolute top-0 left-0 " />
+                src={activeImage} alt="" className="absolute inset-0 h-full w-full object-cover object-top" />
             </AnimatePresence >
 
             <div className="absolute bottom-0 left-0 right-0 px-4 py-3 bg-gradient-to-t from-black/80 to-transparent">

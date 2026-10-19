@@ -1,6 +1,10 @@
 import ProjectLayout from "./components/ProjectLayout";
-import frontView from "../../assets/images/hospoda-pod-bousovem/front-view.png"
-import sideView from "../../assets/images/hospoda-pod-bousovem/side-view.png"
+import hero from "../../assets/images/hospoda-pod-bousovem/hospudka-pod-bousovem-hero.png"
+import menu from "../../assets/images/hospoda-pod-bousovem/hospudka-pod-bousovem-menu.png"
+import eventContact from "../../assets/images/hospoda-pod-bousovem/hospudka-pod-bousovem-event-contact.png"
+import galerieNasPribeh from "../../assets/images/hospoda-pod-bousovem/hospudka-pod-bousovem-galerie-nas-pribeh.png"
+import heroMobile from "../../assets/images/hospoda-pod-bousovem/hospudka-pod-bousovem-mobile-hero.png"
+import contactMobile from "../../assets/images/hospoda-pod-bousovem/hospudka-pod-bousovem-mobile-contact.png"
 
 
 function HospodaPodBousovem() {
@@ -8,14 +12,12 @@ function HospodaPodBousovem() {
     <ProjectLayout
       title='Hospůdka pod Boušovem'
       overview='
-      Hospůdka pod Boušovem is a responsive website built for a local Czech pub, allowing visitors to explore the menu, upcoming events, photo gallery, and essential information.
-
-      I designed and developed the website using React, TypeScript, and Tailwind CSS, integrating Sanity CMS so the owner can manage and update content without modifying the code.'
+      A responsive website for Hospůdka pod Boušovem, a local Czech pub, helping visitors browse food and drink menus, discover events, and find opening hours and directions. It also includes a photo gallery and the pub’s story, while Sanity CMS lets the owner update key content without changing the source code.'
       type='Client website'
       features='Dynamic menu, events, photo gallery, CMS integration'
       stack='React, TypeScript, Tailwind CSS, Sanity CMS, Motion'
-      lesson='Working on a real client project taught me how to balance design decisions with practical requirements, integrate Sanity CMS for content management, and build a website that is easy for both visitors and the owner to use.'
-      images={[frontView, sideView]}
+      lesson='For my first client project, I learned to connect a React and TypeScript frontend to Sanity CMS and retrieve related content using GROQ queries. I gained experience handling loading, error, and empty states when displaying external data. Using Motion for the second time gave me further practice with scroll-triggered animations and interactive transitions.'
+      images={[hero, menu, eventContact, galerieNasPribeh, heroMobile, contactMobile]}
       theme='light'
       livePath='https://hospudka-pod-bousovem.leluanvn21.workers.dev/'
       gitHubPath='https://github.com/Luan2118/hospudka-pod-bousovem'
