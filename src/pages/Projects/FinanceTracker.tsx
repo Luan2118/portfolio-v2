@@ -10,12 +10,11 @@ function FinanceTracker() {
     <ProjectLayout
       title='Finance Tracker'
       overview='
-      Finance Tracker is a full-stack personal finance web app for managing income and expenses, filtering transactions, visualizing financial data, and handling multiple currencies.
-      I built the frontend and backend from scratch using JavaScript, Node.js, Express, and MongoDB, including JWT authentication, protected user data, validation, and REST API endpoints.'
+      Finance Tracker is a full-stack web application for people who want to track their personal income and expenses. Users can create an account, add and delete categorized transactions, and review their balance through charts and filters for date, category, and amount. The app also supports currency conversion between five currencies.'
       type='Full-stack web application'
       features='Authentication, transactions, filters, charts, currency conversion'
-      stack='JavaScript, Node.js, Express, MongoDB, Chart.js'
-      lesson='The biggest lesson was learning how to connect authentication, backend logic, and database access so each user could securely work with only their own data.'
+      stack='JavaScript, Node.js, Express, MongoDB, JWT, Chart.js'
+      lesson='Building my first full-stack application taught me how to connect a JavaScript frontend to an Express API and store user data in MongoDB. I learned to implement registration and login with password hashing, JWT authentication, and token renewal. I also gained experience updating charts after data changes and testing user interactions and API error handling with Vitest and Testing Library.'
       images={[dashboard, expenses, seeAllExpenses, incomeMobile, dashboardMobile]}
       theme='dark'
       livePath='https://finance-tracker-project-sigma.vercel.app/'
