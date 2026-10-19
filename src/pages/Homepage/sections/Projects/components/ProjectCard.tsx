@@ -51,6 +51,7 @@ function ProjectCard({ name, category, image, updateActiveImage, link }: Project
               "
               initial={{ y: 'var(--entry-y)', opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
+              viewport={{once: true}}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <h3 className="text-[clamp(40px,10vw,55px)] md:text-[40px] lg:text-[55px] leading-none font-[Judson] ">{name}</h3>
