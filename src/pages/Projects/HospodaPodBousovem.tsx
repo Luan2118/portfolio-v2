@@ -20,7 +20,6 @@ function HospodaPodBousovem() {
       livePath='https://hospudka-pod-bousovem.leluanvn21.workers.dev/'
       gitHubPath='https://github.com/Luan2118/hospudka-pod-bousovem'
       prev='/finance-tracker'
-      next='/gym-tracker'
     />
   )
 }
