@@ -81,7 +81,7 @@ function Projects() {
                 exit={{ y: '-100%' }}
                 transition={{ duration: 0.4, ease: 'easeOut' }}
                 key={activeImage}
-                src={activeImage} alt="" className="absolute inset-0 h-full w-full object-cover object-top" />
+                src={activeImage} alt="" className="absolute top-0 left-0  " />
             </AnimatePresence >
 
             <div className="absolute bottom-0 left-0 right-0 px-4 py-3 bg-gradient-to-t from-black/80 to-transparent">
