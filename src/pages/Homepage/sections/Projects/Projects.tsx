@@ -63,9 +63,9 @@ function Projects() {
         >
           <ProjectCard name="Gym Tracker" category="Full-Stack Development" image={gymDashboard} updateActiveImage={updateActiveImage} link='/gym-tracker' />
 
-          <ProjectCard name="Finance Tracker" category="Full-Stack Development" image={financeDashBoard} updateActiveImage={updateActiveImage} link='/finance-tracker' />
-
           <ProjectCard name="Hospůdka pod Boušovem" category="Web Design & Development" image={hospoda} updateActiveImage={updateActiveImage} link='/hospudka-pod-bousovem' />
+
+          <ProjectCard name="Finance Tracker" category="Full-Stack Development" image={financeDashBoard} updateActiveImage={updateActiveImage} link='/finance-tracker' />
         </ul>
 
 
