@@ -9,6 +9,7 @@ import useCursor from "../../../hooks/useCursor";
 
 type ProjectLayoutProps = {
   title: string
+  titleSizeClassName?: string
   overview: string
   type?: string
   features?: string
@@ -40,7 +41,7 @@ const buttonVariant: Variants = {
 }
 
 
-function ProjectLayout({ title, overview, type, features, stack, lesson, images, theme, isInProgress, livePath, gitHubPath, next, prev }: ProjectLayoutProps) {
+function ProjectLayout({ title, titleSizeClassName = 'text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl', overview, type, features, stack, lesson, images, theme, isInProgress, livePath, gitHubPath, next, prev }: ProjectLayoutProps) {
 
 
   const linkStyle = theme === "dark"
@@ -100,7 +101,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
           <div className="overflow-hidden">
             <motion.h1
               variants={item}
-              className="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-[Judson] text-center">
+              className={`${titleSizeClassName} font-[Judson] text-center`}>
               {title}
             </motion.h1>
           </div>
@@ -108,14 +109,14 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
           {isInProgress ? <p className="font-[Inter] text-3xl text-[#A84A3A] mx-auto tracking-[0.3rem] mt-10 mb-5 text-center">WEBSITE REDESIGN - IN PROGRESS</p>
             : null}
 
-          <div >
+          <div className="mt-6 xl:mt-0">
 
             <div className="overflow-hidden">
-              <motion.p
+              <motion.h2
                 variants={item}
-                className="text-xl lg:text-xl font-[Judson] py-4">
+                className="text-2xl font-[Judson] py-4">
                 Project Overview
-              </motion.p>
+              </motion.h2>
             </div>
 
             <div className="overflow-hidden">
@@ -132,7 +133,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
           {isInProgress ? null :
             <>
               <div>
-                <motion.p variants={item} className="text-xl lg:text-xl font-[Judson] py-4">Details</motion.p>
+                <motion.h2 variants={item} className="text-2xl font-[Judson] py-4">Details</motion.h2>
 
                 <dl className="text-sm w-fit">
                   <motion.div variants={item} className={`grid grid-cols-[80px_1fr] gap-4 border-b pb-2 ${detailBorder}`}>
@@ -153,11 +154,11 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
               </div>
 
               <div>
-                <motion.p
+                <motion.h2
                   variants={item}
-                  className="text-lg xl:text-xl font-[Judson] py-4">
+                  className="text-2xl font-[Judson] py-4">
                   What I learned
-                </motion.p>
+                </motion.h2>
 
                 <motion.p
                   variants={item}
