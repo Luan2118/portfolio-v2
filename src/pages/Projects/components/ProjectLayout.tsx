@@ -9,7 +9,6 @@ import useCursor from "../../../hooks/useCursor";
 
 type ProjectLayoutProps = {
   title: string
-  titleSizeClassName?: string
   overview: string
   type?: string
   features?: string
@@ -41,7 +40,7 @@ const buttonVariant: Variants = {
 }
 
 
-function ProjectLayout({ title, titleSizeClassName = 'text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl', overview, type, features, stack, lesson, images, theme, isInProgress, livePath, gitHubPath, next, prev }: ProjectLayoutProps) {
+function ProjectLayout({ title, overview, type, features, stack, lesson, images, theme, isInProgress, livePath, gitHubPath, next, prev }: ProjectLayoutProps) {
 
 
   const linkStyle = theme === "dark"
@@ -85,23 +84,23 @@ function ProjectLayout({ title, titleSizeClassName = 'text-3xl md:text-4xl xl:te
 
         <Link to='/'
           aria-label="Back to Homepage"
-          className="mb-8 2xl:mb-15 w-10 xl:w-14 mt-5 xl:ml-5 ">
+          className=" w-10 mt-5 ml-3 ">
           <motion.img
             variants={buttonVariant}
             src={isDark ? whiteArrow : blackArrow}
             alt=""
             onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
-            className={`${isDark ? ' bg-[#171512]' : null}`}
+            className={`max-w-[40px] max-h-[40px] ${isDark ? 'bg-[#171512]' : ''}`}
           />
         </Link>
 
 
-        <div className="order-1 flex flex-col gap-4 2xl:gap-10 xl:px-15 2xl:px-30 ">
+        <div className="order-1 flex flex-col gap-4 2xl:gap-8 xl:px-5 2xl:px-15">
 
           <div className="overflow-hidden">
             <motion.h1
               variants={item}
-              className={`${titleSizeClassName} font-[Judson] text-center`}>
+              className="text-3xl md:text-4xl 2xl:text-5xl 2xl:pt-5 font-[Judson] text-center">
               {title}
             </motion.h1>
           </div>
@@ -109,19 +108,19 @@ function ProjectLayout({ title, titleSizeClassName = 'text-3xl md:text-4xl xl:te
           {isInProgress ? <p className="font-[Inter] text-3xl text-[#A84A3A] mx-auto tracking-[0.3rem] mt-10 mb-5 text-center">WEBSITE REDESIGN - IN PROGRESS</p>
             : null}
 
-          <div className="mt-6 xl:mt-0">
+          <div>
 
             <div className="overflow-hidden">
               <motion.h2
                 variants={item}
-                className="text-2xl font-[Judson] py-4">
+                className="text-lg xl:text-xl font-[Judson] pt-2 pb-4">
                 Project Overview
               </motion.h2>
             </div>
 
             <div className="overflow-hidden">
 
-              <motion.p variants={item} className="text-sm max-w-[680px] xl:max-h-[80px]">
+              <motion.p variants={item} className="text-sm ">
                 {overview}
               </motion.p>
             </div>
@@ -133,7 +132,7 @@ function ProjectLayout({ title, titleSizeClassName = 'text-3xl md:text-4xl xl:te
           {isInProgress ? null :
             <>
               <div>
-                <motion.h2 variants={item} className="text-2xl font-[Judson] py-4">Details</motion.h2>
+                <motion.h2 variants={item} className="text-lg xl:text-xl font-[Judson] pt-2 pb-4">Details</motion.h2>
 
                 <dl className="text-sm w-fit">
                   <motion.div variants={item} className={`grid grid-cols-[80px_1fr] gap-4 border-b pb-2 ${detailBorder}`}>
@@ -156,13 +155,13 @@ function ProjectLayout({ title, titleSizeClassName = 'text-3xl md:text-4xl xl:te
               <div>
                 <motion.h2
                   variants={item}
-                  className="text-2xl font-[Judson] py-4">
+                  className="text-lg xl:text-xl font-[Judson] pt-2 pb-4">
                   What I learned
                 </motion.h2>
 
                 <motion.p
                   variants={item}
-                  className="text-sm max-w-[680px]">
+                  className="text-sm ">
                   {lesson}
                 </motion.p>
               </div>
@@ -171,7 +170,7 @@ function ProjectLayout({ title, titleSizeClassName = 'text-3xl md:text-4xl xl:te
         </div>
 
         {isInProgress ? null :
-          <div className="order-3 pb-4 flex justify-between  mt-10  xl:px-15 2xl:px-30">
+          <div className="order-3 pb-4 flex justify-between mt-5  xl:px-5 2xl:px-15">
             <div className="flex gap-2 md:gap-5">
               <ProjectLink label="Live" theme={theme} projectPath={livePath} />
               <ProjectLink label="Github" theme={theme} projectPath={gitHubPath} />

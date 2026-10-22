@@ -9,19 +9,18 @@ function GymTracker() {
   return (
     <ProjectLayout
       title='Gym Tracker'
-      titleSizeClassName='text-5xl md:text-6xl xl:text-5xl 2xl:text-6xl'
       overview='
       Gym Tracker is a web app for planning gym workouts and tracking progress. Users can create custom training plans, log weights and repetitions, and review their workout history. An exercise library, strength progress charts, and body weight tracking help users follow their progress over time.'
       type='Full-stack web application'
       features='Custom training plans, workout logging, workout history, exercise library, progress charts, body weight tracking'
       stack='React, TypeScript, React Router, Supabase, PostgreSQL, Chart.js, CSS Modules, Vite'
-      lesson='This project helped me understand how to manage data across a React and TypeScript application. I learned to update nested workout data—days, exercises, and sets—without mutating state, and share it between pages using React Router. Connecting the app to Supabase gave me practical experience keeping the interface in sync with saved data and handling loading states and errors.'
+      lesson='Building Gym Tracker taught me how to manage complex state in React, work with nested data structures, and update data without mutating the original state. I improved my TypeScript skills by defining types for workout data and working with them across different components. Integrating Supabase helped me understand how to connect a frontend application to a database, handle asynchronous operations, and manage loading and error states.
+'
       images={[dashboard, workoutHistory, exercises, activeMobile, exercisesMobile]}
       theme='light'
       livePath='https://gym-tracker-azure-tau.vercel.app/'
       gitHubPath='https://github.com/Luan2118/gym-tracker'
-      next='/finance-tracker'
-
+      next='/hospudka-pod-bousovem'
     />
   )
 }

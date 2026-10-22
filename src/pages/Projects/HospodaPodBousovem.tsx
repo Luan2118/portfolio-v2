@@ -21,7 +21,8 @@ function HospodaPodBousovem() {
       theme='light'
       livePath='https://hospudka-pod-bousovem.leluanvn21.workers.dev/'
       gitHubPath='https://github.com/Luan2118/hospudka-pod-bousovem'
-      prev='/finance-tracker'
+      prev='/gym-tracker'
+      next='/finance-tracker'
     />
   )
 }
