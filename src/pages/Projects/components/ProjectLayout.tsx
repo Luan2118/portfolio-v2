@@ -84,7 +84,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
 
         <Link to='/'
           aria-label="Back to Homepage"
-          className=" w-10 mt-5 ml-3 ">
+          className="w-10 mt-5 xl:ml-3 ">
           <motion.img
             variants={buttonVariant}
             src={isDark ? whiteArrow : blackArrow}
@@ -100,7 +100,7 @@ function ProjectLayout({ title, overview, type, features, stack, lesson, images,
           <div className="overflow-hidden">
             <motion.h1
               variants={item}
-              className="text-3xl md:text-4xl 2xl:text-5xl 2xl:pt-5 font-[Judson] text-center">
+              className="text-3xl md:text-4xl 2xl:text-5xl 2xl:pt-5 font-[Judson] text-center mt-4 xl:mt-0">
               {title}
             </motion.h1>
           </div>
