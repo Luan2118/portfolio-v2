@@ -43,7 +43,7 @@ function Projects() {
     <section id="projects" className="bg-[#171512] text-[#FFFBF4] min-h-svh flex flex-col px-5 lg:px-20 xl:px-40 2xl:px-60 gap-4 pt-30 pb-20">
 
       <div
-        className=" font-[Judson] overflow-hidden px-10 text-[#FFFBF4]/70 ">
+        className="font-[Judson] overflow-hidden md:px-10 text-[#FFFBF4]/70">
         <motion.h2
           initial={{ y: "100%", opacity: 0 }
           }
