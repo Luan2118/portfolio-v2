@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import gymDashboard from "../../../../assets/images/gym-tracker/dashboard.png";
 import financeDashBoard from "../../../../assets/images/finance-tracker/dashboard.png";
 import hospoda from "../../../../assets/images/hospoda-pod-bousovem/hospudka-pod-bousovem-hero.png";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AnimatePresence, useMotionValue } from "motion/react";
 import useCursor from "../../../../hooks/useCursor";
 import { useEffect } from "react";
@@ -12,6 +12,7 @@ import { useEffect } from "react";
 function Projects() {
 
   const [activeImage, setActiveImage] = useState<string>('');
+  const pointerPosition = useRef<{ x: number; y: number } | null>(null);
 
   function updateActiveImage(image: string) {
     setActiveImage(image)
@@ -20,23 +21,34 @@ function Projects() {
   const imageX = useMotionValue(0);
   const imageY = useMotionValue(0);
 
+  const { hoveredProject, setHoveredProject } = useCursor();
+  const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+
   useEffect(() => {
     const moveImage = (e: MouseEvent) => {
+      pointerPosition.current = { x: e.clientX, y: e.clientY };
       imageX.set(e.clientX + 15)
       imageY.set(e.clientY + 10)
     }
 
+    const updateProjectUnderPointer = () => {
+      const position = pointerPosition.current;
+      if (!hasFinePointer || !position) return;
+
+      const element = document.elementFromPoint(position.x, position.y);
+      const card = element?.closest<HTMLElement>("[data-project-card]");
+      setHoveredProject(card?.dataset.projectName ?? null);
+      setActiveImage(card?.dataset.projectImage ?? "");
+    }
+
     window.addEventListener('mousemove', moveImage)
+    window.addEventListener('scroll', updateProjectUnderPointer, { passive: true });
 
     return () => {
       window.removeEventListener('mousemove', moveImage)
+      window.removeEventListener('scroll', updateProjectUnderPointer);
     }
-  }, [])
-
-
-  const { hoveredProject } = useCursor();
-
-  const hasFinePointer = window.matchMedia("(pointer: fine)").matches
+  }, [hasFinePointer, imageX, imageY, setHoveredProject])
 
 
   return (

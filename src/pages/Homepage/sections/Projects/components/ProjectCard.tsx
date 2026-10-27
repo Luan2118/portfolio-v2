@@ -19,6 +19,9 @@ function ProjectCard({ name, category, image, updateActiveImage, link }: Project
   return (
     <>
       <motion.li
+        data-project-card
+        data-project-name={name}
+        data-project-image={image}
         className={`border border-l-0 border-r-0 pt-10 pb-10 lg:pt-20 lg:pb-20 group border-white/40 ${name === 'Gym Tracker' ? null : 'border-t-0'}
         [--entry-x:0]
 
